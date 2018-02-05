@@ -1,0 +1,53 @@
+.show-list {
+  width: 100%;
+  padding: 10px;
+}
+
+.list_more {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.hot-art-list {
+  padding: 10px;
+}
+
+.list_more a {
+  display: block;
+  text-decoration: underline;
+  color: #666;
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+}
+
+.article-list .article-nav-title {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+.article-list .indexnavbtn {
+  background: #988e8e;
+}
+
+ul.indexnavbtn li span {
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  margin: 0 auto;
+  text-align: center;
+  opacity: .8;
+}
+
+.article-nav-title >li {
+  cursor: pointer;
+}
+
+.article-nav-title a {
+  color: white;
+}

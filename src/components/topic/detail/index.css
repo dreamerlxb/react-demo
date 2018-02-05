@@ -1,0 +1,11 @@
+.article-comment textarea {
+  font-size: 14px;
+}
+
+.article-comment>button {
+  margin: 10px 0 auto;
+}
+
+.article-comment {
+  margin: 10px 0;
+}

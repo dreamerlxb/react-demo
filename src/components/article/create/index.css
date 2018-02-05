@@ -1,0 +1,57 @@
+.create-title {
+  color: #34495e;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.article-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: flex-start;
+}
+
+.article-item>label {
+  font-size: 14px;
+  margin-right: 10px;
+  width: 60px;
+}
+
+.article-item .article-input {
+  width: 90%;
+}
+
+.with-line {
+  font-size: 14px;
+  color: #454545;
+  margin: 10px auto;
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+}
+
+.with-line:before {
+  content: "";
+  border-top: 1px dotted #454545;
+  display: block;
+  position: absolute;
+  width: 400px;
+  top: 8px;
+  left: 0;
+}
+
+.with-line:after {
+  content: "";
+  border-top: 1px dotted #454545;
+  display: block;
+  position: absolute;
+  width: 400px;
+  top: 8px;
+  right: 0;
+}
+
+.BraftEditor-controlBar .control-item.button {
+  width: 36px !important;
+}

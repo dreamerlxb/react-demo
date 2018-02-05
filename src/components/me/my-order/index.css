@@ -1,0 +1,20 @@
+.order-form {
+  padding: 20px;
+  background: #F4F4F4;
+  min-width: 900px;
+}
+
+.ordersele {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ordersele>a>span {
+  font-size: 14px;
+}
+
+.no-list-style {
+  list-style: none;
+  padding-left: 0;
+}

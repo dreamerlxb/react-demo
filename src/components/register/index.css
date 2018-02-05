@@ -1,0 +1,32 @@
+.container {
+  max-width: 400px;
+  background: white;
+  margin: 100px auto;
+}
+
+.lead {
+  font-size: 1.25em;
+}
+
+.tip {
+  color: #CE3939;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 5px;
+  max-width: 100%;
+  font-weight: 700;
+}
+
+.button {
+  display: block;
+  margin: 0;
+  padding: 10px 16px;
+  width: 100%;
+  font-size: 18px;
+}

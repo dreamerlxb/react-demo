@@ -1,0 +1,22 @@
+.map-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.map-content {
+    width: 100%;
+    height: 100%;
+}
+
+.map-loading-spin {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.select-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 0 25px 0;
+}

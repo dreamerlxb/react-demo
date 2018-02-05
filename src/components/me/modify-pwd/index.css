@@ -1,0 +1,28 @@
+.find-pwd-container {
+  min-height: 500px;
+  /*background: #f9f4f4;*/
+  padding: 20px;
+  /*width: 80%;*/
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.find-pwd-phone-code {
+  display: flex;
+  justify-content: space-between;
+}
+
+.find-pwd-container>h3 {
+  text-align: left;
+  font-size: 20px;
+  margin: auto;
+  width: 100% !important;
+}
+
+.find-pwd-first-page>input {
+  margin-bottom: 20px;
+}
+
+.find-pwd-first-page {
+  margin: 20px auto;
+}

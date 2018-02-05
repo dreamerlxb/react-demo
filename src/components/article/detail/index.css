@@ -1,0 +1,18 @@
+.article-comment {
+  margin: 10px 0;
+}
+
+.article-comment textarea {
+  font-size: 14px;
+}
+
+.article-comment>button {
+  margin: 10px 0 auto;
+}
+
+span.content_num {
+  text-align: right;
+  padding: 10px;
+  float: right;
+  font-size: 14px;
+}

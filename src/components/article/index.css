@@ -1,0 +1,139 @@
+.article-container {
+    display: flex;
+    justify-content: center;
+    min-width: 1000px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.left-content {
+    background: #f9f4f4;
+    flex-grow: 1;
+    margin-right: 20px;
+    padding: 20px;
+    min-width: 700px;
+}
+
+.right-content {
+    width: 380px;
+    background: #f9f4f4;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.article-right-content .btn-publish {
+    margin: 15px 0 0;
+    background: #63b8ff;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    height: 48px;
+    line-height: 48px;
+    width: 49%;
+    text-align: center;
+    border-width: 0px;
+    cursor: pointer;
+}
+
+.liactive {
+    border-bottom: 2px white solid;
+}
+
+.home-diary-top {
+    margin-top: 20px;
+    height: 25px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.home-diary-top span {
+    display: block;
+    height: 25px;
+    width: 25px;
+    background: #ce3939;
+    margin-bottom: -1px;
+    float: left;
+}
+
+.home-diary-top p {
+    display: block;
+    font-weight: 600;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+    color: #ce3939;
+    font-size: 18px;
+}
+
+/* topic item */
+.topicitemcon .topic-title {
+    text-align: left;
+}
+.topicitemcon {
+    border-bottom: 1px #ccc solid;
+    padding: 20px 0;
+}
+
+.tp_userimg {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.tp_userimg img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: block;
+}
+
+.tp_comment {
+    display: flex;
+}
+
+.tp_comment>a {
+    display: block;
+    width: 68px;
+    height: 24px;
+    cursor: pointer;
+    line-height: 24px;
+    border-radius: 5px;
+    text-align: center;
+    float: right;
+    margin-left: 15px;
+    border: 1px solid #ccc;
+}
+
+.tp_comment>a img {
+    width: 16px;
+    margin: 4px;
+    height: 16px;
+}
+
+.topictx {
+    padding: 1.2em 0;
+    font-size: 14px;
+}
+
+.topic-img-show {
+    float: left;
+    margin: 10px;
+    width: 42%;
+}
+
+.topic-img-show img {
+    height: 100%;
+    max-height: 100px;
+    width: 100%;
+}
+
+.right-sidebar-topic-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.topic-img {
+    float: left;
+    list-style: none;
+    padding-left: 0px;
+}

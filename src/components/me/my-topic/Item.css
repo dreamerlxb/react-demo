@@ -1,0 +1,86 @@
+.topicitemcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #D4D4D4;
+}
+
+.topictx p {
+  font-size: 14px;
+}
+
+.topicbot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 0;
+}
+
+.topicbot>.topicuser {
+  display: flex;
+  align-items: center;
+  flex-grow: 0.5;
+}
+
+.tp_userimg {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  margin-right: 3%;
+}
+
+.tp_userimg img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
+.my_tp_comment {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tp_usertx>p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+a.tp_deletbtn {
+  color: #fff;
+  background: #ce3939;
+  text-align: center;
+  margin: 0 .5em 0 .5em;
+  border: 1px solid #ce3939;
+  display: block;
+  width: 68px;
+  height: 24px;
+  cursor: pointer;
+  line-height: 24px;
+  border-radius: 5px;
+}
+
+.my_tp_comment>a {
+  margin: 0 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 24px;
+  cursor: pointer;
+  line-height: 24px;
+  border-radius: 5px;
+  text-align: center;
+  float: right;
+  margin-left: 15px;
+  border: 1px solid #ccc;
+}
+
+.my_tp_comment>a img {
+  width: 16px;
+  margin: 4px;
+  height: 16px;
+}

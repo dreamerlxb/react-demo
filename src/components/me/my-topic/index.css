@@ -1,0 +1,12 @@
+.topic-list {
+  padding: 10px;
+  margin: 0 auto;
+  /*background: #F4F4F4;*/
+}
+
+.topic-list-header {
+  margin: 0 auto;
+  border-bottom: 2px solid #ce3939;
+  font-size: 14px;
+  padding: 10px;
+}

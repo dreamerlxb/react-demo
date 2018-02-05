@@ -1,0 +1,10 @@
+{
+    "extends": "react-app",
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "rules": {
+        "strict": 0
+    }
+  }

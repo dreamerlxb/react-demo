@@ -1,0 +1,53 @@
+.topicitemcon {
+  border-bottom: 1px #ccc solid;
+  padding: 20px 0;
+}
+
+.tp_userimg {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+}
+
+.tp_userimg img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
+.tp_comment {
+  display: block;
+  width: 68px;
+  height: 24px;
+  cursor: pointer;
+  line-height: 24px;
+  border-radius: 5px;
+  text-align: center;
+  float: right;
+  margin-left: 15px;
+  border: 1px solid #ccc;
+}
+
+/*.tp_comment>a img {
+  width: 16px;
+  margin: 4px;
+  height: 16px;
+}*/
+
+.topictx {
+  padding: 1.2em 0;
+  font-size: 14px;
+}
+
+.topic-img-show {
+  float: left;
+  margin: 10px;
+}
+
+.topicimg>ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}

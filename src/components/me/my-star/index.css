@@ -1,0 +1,16 @@
+.collection-form {
+  padding: 20px;
+  background: #F4F4F4;
+}
+
+.ordersele{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.no-list-style {
+  list-style: none;
+  padding-left: 0;
+}

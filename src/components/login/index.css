@@ -1,0 +1,45 @@
+.container {
+  margin: 100px auto;
+  max-width: 50%;
+  padding: 20px;
+  border-radius: 5px;
+  background: white;
+}
+
+.lead {
+  font-size: 1.25em;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 5px;
+  max-width: 100%;
+  font-weight: 700;
+}
+
+.button {
+  display: block;
+  padding: 10px 16px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.tip {
+  color: #CE3939;
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 5px;
+  max-width: 100%;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 0 5px 0;
+}

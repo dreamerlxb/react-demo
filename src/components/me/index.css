@@ -1,0 +1,15 @@
+.me-container {
+  background: #fff;
+  position: relative;
+  padding: 24px 0;
+  overflow: hidden;
+  border-radius: 4px;
+  margin: 0 20px;
+}
+
+.me-content {
+  border-left: 1px solid #e9e9e9;
+  padding: 0 24px;
+  position: relative;
+  left: -1px;
+}

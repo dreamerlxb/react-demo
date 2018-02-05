@@ -1,0 +1,16 @@
+.footer1 {
+    padding: 20px 0 10px;
+    height: 60px;
+}
+
+.foot_bot {
+    background: #63B8FF;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.foot_bot>span {
+  text-align: center;
+  display: block;
+  color: white;
+}

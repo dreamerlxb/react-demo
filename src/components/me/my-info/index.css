@@ -1,0 +1,90 @@
+.info-form {
+  padding: 0 20px 20px;
+  /*border-top: 2px solid #ce3939;*/
+  /*background: #F4F4F4;*/
+	min-width: 800px;
+	/*margin: 0 20px;*/
+  border-radius: 5px;
+}
+
+.info-title {
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  line-height: 60px;
+}
+
+.info-title .info-title-edit,
+.info-title-upedit {
+  color: #fff;
+  cursor: pointer;
+  line-height: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 12px;
+  padding: 0 10px;
+  background: #ce3939;
+  float: right;
+  padding: 0 20px;
+}
+
+.user-info-avatar {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0 10px;
+  line-height: 24px;
+  display: flex;
+}
+
+.user-info-avatar label {
+  font-size: 14px;
+  color: #333;
+  margin-right: 20px;
+  width: 85px;
+  float: left;
+}
+
+.user-info-avatar img {
+  width: 120px;
+   height: 120px;
+   cursor: pointer;
+}
+
+.info-detail {
+  padding: 20px 0;
+}
+
+.info-form-item {
+  height: 40px;
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.info-form-item label {
+  font-size: 14px;
+  color: #333;
+  margin-right: 20px;
+	width: 100px;
+}
+
+.info-form-item input {
+  padding: 5px 10px;
+	border-radius: 5px;
+	border-width: 1px;
+	width: 300px;
+}
+
+.info-form-item>span {
+  font-size: 14px;
+}
+
+.info-detail button {
+	padding: 10px 20px;
+	border-radius: 5px;
+	border-width: 1px;
+	width: 100px;
+	font-size: 16px;
+	margin-top:20px;
+	background: #ce3939;
+	color: white;
+}
