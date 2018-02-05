@@ -13,10 +13,6 @@ class Sider extends Component {
   //   super(props);
   // }
 
-  static propTypes = {
-    selectedKey: PropTypes.string
-  };
-
   render() {
     return (
       <aside className="layout-sider">
@@ -62,6 +58,10 @@ class Sider extends Component {
       </aside>
     );
   }
+
+  static propTypes = {
+    selectedKey: PropTypes.string
+  };
 }
 
 export default Sider;
