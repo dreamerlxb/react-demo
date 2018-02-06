@@ -12,7 +12,7 @@ class Item extends React.Component {
 
   render() {
     return (
-      <div className="topicitemcon">{this.props.item}
+      <div className="topicitemcon">
         <div className="topictx">
           <p><Link to={`/topic/2`}>#<em>title</em>#</Link>comments</p>
         </div>

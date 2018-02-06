@@ -6,12 +6,13 @@
     padding: 10px;
 }
 
-.left-content {
+.article-container .article-left-content {
+    max-width: 900px;
+    min-width: 600px;
     background: #f9f4f4;
     flex-grow: 1;
     margin-right: 20px;
     padding: 20px;
-    min-width: 700px;
 }
 
 .right-content {
@@ -65,9 +66,11 @@
 }
 
 /* topic item */
+
 .topicitemcon .topic-title {
     text-align: left;
 }
+
 .topicitemcon {
     border-bottom: 1px #ccc solid;
     padding: 20px 0;

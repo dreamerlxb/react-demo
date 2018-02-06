@@ -9,3 +9,17 @@
   .ant-carousel .slick-slide h3 {
     color: #fff;
   }
+
+  .templates-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .templates-wrapper>span {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .templates-wrapper .ant-carousel {
+    width: 100%;
+  }

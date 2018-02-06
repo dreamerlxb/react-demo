@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import Menu from 'antd/lib/menu';
 import Modal from 'antd/lib/modal';
 import logo from '../../logo.svg';
@@ -20,19 +20,6 @@ class Header extends React.Component {
         this.judgeLogin = this.judgeLogin.bind(this);
     }
 
-    static propTypes = {
-        className: PropTypes.string,
-        isLogin: PropTypes.bool,
-        logout: PropTypes.func,
-        loginUser: PropTypes.object,
-        logoutInfo: PropTypes.object // 如果退出时出错了，那么错误信息为logoutInfo
-    };
-
-    static defaultProps = {
-        className: 'header1',
-        isLogin: false
-    };
-
     handleMenuSelect(data) {
         this.setState({ currentItem: data.key });
         if (data.key === 'logout') {
@@ -43,6 +30,17 @@ class Header extends React.Component {
                     _me.props.logout();
                 },
                 onCancel() { }
+            });
+        }
+    }
+
+    componentDidMount() {
+        const { location } = this.props;
+        console.log('header', location);
+        if (location) {
+            const paths = location.pathname.split('/');
+            this.setState({
+                current: paths[paths.length - 1],
             });
         }
     }
@@ -63,7 +61,7 @@ class Header extends React.Component {
             );
             return (
                 <SubMenu className="ant-menu-item menuItem subMenu" title={title} key="login-user">
-                    <Item key="my-info">
+                    <Item key="myInfo">
                         <Link to="/me">个人中心</Link>
                     </Item>
                     <Item key="logout">安全退出</Item>
@@ -86,14 +84,16 @@ class Header extends React.Component {
         return (
             <div className="header1 app-header">
                 <div className={`${this.props.className}-logo `}>
-                    <img src={logo} className="app-logo" alt="logo"/>
+                    <img src={logo} className="app-logo" alt="logo" />
                 </div>
-                <div className="nav">
-                    <Menu mode="horizontal" defaultSelectedKeys={['home']} onSelect={this.handleMenuSelect}>
+                {/* <div className="nav"> */}
+                    <Menu mode="horizontal" className="nav"
+                        onClick={this.handleClick}
+                        selectedKeys={[ this.state.current ]} defaultSelectedKeys={['home']} onSelect={this.handleMenuSelect}>
                         <Item className="menuItem" key="home">
                             <Link to="/" className="nav-link">首页</Link>
                         </Item>
-                        <Item className="menuItem" key="race">
+                        <Item className="menuItem" key="charts">
                             <Link to="/charts" className="nav-link">图表</Link>
                         </Item>
                         <Item className="menuItem" key="score">
@@ -108,10 +108,34 @@ class Header extends React.Component {
                         {/* <SubMenu className="ant-menu-item menuItem subMenu" title={<Link to="/racer-say" className="nav-link">赛客说</Link>} key="racer-say"></SubMenu> */}
                         {this.judgeLogin()}
                     </Menu>
-                </div>
+                {/* </div> */}
             </div>
         );
     }
+
+    state = {
+        current: 'home'
+    };
+
+    handleClick = (e) => {
+        console.log('click ', e);
+        this.setState({
+            current: e.key,
+        });
+    }
+
+    static propTypes = {
+        className: PropTypes.string,
+        isLogin: PropTypes.bool,
+        logout: PropTypes.func,
+        loginUser: PropTypes.object,
+        logoutInfo: PropTypes.object // 如果退出时出错了，那么错误信息为logoutInfo
+    };
+
+    static defaultProps = {
+        className: 'header1',
+        isLogin: false
+    };
 }
 
-export default Header;
+export default withRouter(Header);

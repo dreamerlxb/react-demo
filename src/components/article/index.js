@@ -138,7 +138,7 @@ class Article extends Component {
   render() {
     return (
       <div className="article-container">
-        <div className="left-content article-left-content">
+        <div className="article-left-content">
           <Switch>
               <Route exact path='/article' component={ArticleList} />
               <Route path="/article/create" exact component={ CreateArticle }/>

@@ -5,25 +5,36 @@ import './index.css';
 
 // 展示信息
 export default class MyInfoShow extends React.Component {
-  static propTypes = {
-    onEditClick: PropTypes.func,
-    user: PropTypes.object
-  };
 
-  /* renderUserInfo() {
+  renderUserInfo() {
     if (this.props.user) {
       return (
         <div className="info-detail">
-          <div className="info-form-item"><label>用户名</label><span>{ this.props.user.username }</span></div>
-          <div className="info-form-item"><label>昵称</label><span>{ this.props.user.name }</span></div>
-          <div className="info-form-item"><label>性别</label><span>{ this.props.user.gender == '1' ? '男' : '女' }</span></div>
-          <div className="info-form-item"><label>手机</label><span>{ this.props.user.mobileNumber }</span></div>
-          <div className="info-form-item"><label>联系邮箱</label><span>{ this.props.user.email }</span></div>
+          <div className="info-form-item">
+            <label>用户名</label>
+            <span>{ this.props.user.username }</span>
+          </div>
+          <div className="info-form-item">
+            <label>昵称</label>
+            <span>{ this.props.user.name }</span>
+          </div>
+          <div className="info-form-item">
+            <label>性别</label>
+            <span>{ this.props.user.gender === '1' ? '男' : '女' }</span>
+          </div>
+          <div className="info-form-item">
+            <label>手机</label>
+            <span>{ this.props.user.mobileNumber }</span>
+          </div>
+          <div className="info-form-item">
+            <label>联系邮箱</label>
+            <span>{ this.props.user.email }</span>
+          </div>
 				</div>
       );
     }
     return null;
-  }*/
+  }
 
   render() {
     return (
@@ -38,20 +49,14 @@ export default class MyInfoShow extends React.Component {
 					</div>
 				</div>
 				{
-          this.props.user ? (
-            <div className="info-detail">
-              <div className="info-form-item">
-                <label>用户名</label>
-                <span>{ this.props.user.username }</span>
-              </div>
-              <div className="info-form-item"><label>昵称</label><span>{ this.props.user.name }</span></div>
-              <div className="info-form-item"><label>性别</label><span>{ this.props.user.gender === '1' ? '男' : '女' }</span></div>
-              <div className="info-form-item"><label>手机</label><span>{ this.props.user.mobileNumber }</span></div>
-              <div className="info-form-item"><label>联系邮箱</label><span>{ this.props.user.email }</span></div>
-            </div>
-          ) : null
+          this.renderUserInfo()
         }
 			</div>
     );
   }
+
+  static propTypes = {
+    onEditClick: PropTypes.func,
+    user: PropTypes.object
+  };
 }

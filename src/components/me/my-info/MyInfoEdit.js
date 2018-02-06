@@ -15,13 +15,6 @@ const Option = Select.Option;
 // 编辑信息
 export default class MyInfoEdit extends React.Component {
 
-  static propTypes = {
-    onBackClick: PropTypes.func,
-    user: PropTypes.object,
-    modifyUserInfo: PropTypes.func,
-    fetchLoginUser: PropTypes.func
-  };
-
   constructor(props) {
     super(props);
     // this.handleSubmit = this.handleSubmit.bind(this);
@@ -172,4 +165,11 @@ export default class MyInfoEdit extends React.Component {
       </div>
     );
   }
+
+  static propTypes = {
+    onBackClick: PropTypes.func,
+    user: PropTypes.object,
+    modifyUserInfo: PropTypes.func,
+    fetchLoginUser: PropTypes.func
+  };
 }

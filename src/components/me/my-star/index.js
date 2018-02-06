@@ -116,7 +116,7 @@ class MyStar extends Component {
             <span>话题</span>
           </a>
         </div>
-        <ul class="no-list-style">
+        <ul className="no-list-style">
           { this.renderArticleItems() }
         </ul>
       </div>

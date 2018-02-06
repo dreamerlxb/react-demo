@@ -1,5 +1,7 @@
-.article-list {
+.article-list ul {
   /*margin: 0 20px;*/
+  list-style: none;
+  padding-left: 0px;
 }
 .my-article-list-item {
   border-bottom: 1px dashed #ccc;

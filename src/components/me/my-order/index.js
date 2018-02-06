@@ -47,7 +47,7 @@ class MyOrder extends Component {
   renderSetions() {
     if (this.props.enrolls && this.props.enrolls.length) {
       let lis = this.props.enrolls.map(item => (<li className="section-order-item" key={item}> <Section /> </li>));
-      return <ul class="no-list-style">{ lis } </ul>;
+      return <ul className="no-list-style">{ lis } </ul>;
     }
     return <div>没有数据</div>;
   }
