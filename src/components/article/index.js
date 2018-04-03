@@ -100,25 +100,6 @@ class TopicItem extends Component {
  * 赛客发表的文章
  */
 class Article extends Component {
-  state = {
-    index: 0
-  };
-  static propTypes = {
-    topics: PropTypes.array,
-    children: PropTypes.element,
-    fetchTopics: PropTypes.func
-  };
-
-  static defaultProps = {
-    topics: [
-      { id: 1 },
-      { id: 2 },
-      { id: 3 },
-      { id: 4 },
-      { id: 5 },
-      { id: 6 }
-    ]
-  };
 
   // componentWillMount() {
   //   this.props.fetchTopics({
@@ -162,6 +143,27 @@ class Article extends Component {
       </div>
     );
   }
+
+  state = {
+    index: 0
+  };
+
+  static propTypes = {
+    topics: PropTypes.array,
+    children: PropTypes.element,
+    fetchTopics: PropTypes.func
+  };
+
+  static defaultProps = {
+    topics: [
+      { id: 1 },
+      { id: 2 },
+      { id: 3 },
+      { id: 4 },
+      { id: 5 },
+      { id: 6 }
+    ]
+  };
 }
 
 export default Article;

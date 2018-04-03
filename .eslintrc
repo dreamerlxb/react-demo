@@ -6,6 +6,6 @@
     },
     "rules": {
         "strict": 0,
-        "jsx-a11y/href-no-hash": 2
+        "jsx-a11y/href-no-hash": 0
     }
   }

@@ -7,8 +7,10 @@ import Select from 'antd/lib/select';
 import Checkbox from 'antd/lib/checkbox';
 import Icon from 'antd/lib/icon';
 import message from 'antd/lib/message';
-import BraftEditor from 'braft-editor'
-import 'braft-editor/dist/braft.css'
+// import BraftEditor from 'braft-editor'
+// import 'braft-editor/dist/braft.css'
+
+import Editor from '../../editor';
 
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
@@ -22,14 +24,6 @@ import './index.css';
 const Option = Select.Option;
 
 class CreateArticle extends Component {
-
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   if (nextProps.status === 200) { // 说明创建成功
-  //     browserHistory.push('/racer-say/article');
-  //     return false;
-  //   }
-  //   return true;
-  // }
 
   componentDidMount() {
     // 动态修改编辑器下的button的type（在浏览器中button的type默认值为submit）
@@ -109,13 +103,6 @@ class CreateArticle extends Component {
   }
 
   render() {
-    const editorProps = {
-      height: 500,
-      initialContent: this.state.content,
-      onChange: this.handleChange,
-      onHTMLChange: this.handleHTMLChange
-    }
-
     return (
       <div style={{ padding: '20px' }}>
         <div className="create-title"  style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
@@ -161,8 +148,7 @@ class CreateArticle extends Component {
             </div>
           </div>
           <div className="with-line">文章内容</div>
-          {/* <MyEditor /> */}
-          <BraftEditor {...editorProps}/>
+          <Editor content="111111111"/>
           <div style={{ margin: '0 auto', display: 'block', marginTop: '20px' }}>
             <Checkbox defaultChecked={ this.state.isAccept } onChange={ e => this.setState({ isAccept: e.target.checked }) }> 你已阅读并接受《
               <a href="/web/index/agreement.html" target="_blank">景鸿科技服务协议</a>
@@ -220,14 +206,6 @@ class CreateArticle extends Component {
       userId
     };
     this.props.publishWithImage({article: { title, abstract, type, tags: labels.split(','), image, userId }});
-  }
-
-  handleChange = (content) => {
-    console.log(content)
-  }
-
-  handleHTMLChange = (html) => {
-    console.log(html)
   }
 
   static propTypes = {

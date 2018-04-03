@@ -45,6 +45,13 @@ class Header extends React.Component {
         }
     }
 
+    handleClick = (e) => {
+        console.log('click ', e);
+        this.setState({
+            current: e.key,
+        });
+    }
+
     /**
      * 判断是否登陆
      */
@@ -116,13 +123,6 @@ class Header extends React.Component {
     state = {
         current: 'home'
     };
-
-    handleClick = (e) => {
-        console.log('click ', e);
-        this.setState({
-            current: e.key,
-        });
-    }
 
     static propTypes = {
         className: PropTypes.string,

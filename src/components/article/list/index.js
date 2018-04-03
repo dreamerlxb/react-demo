@@ -65,10 +65,6 @@ class ArticleList extends Component {
     });
   }
 
-  // componentWillMount() {
-  //   this.props.fetchLatestArticle(+userId, 10, 0);
-  // }
-
   render() {
     return (
       <div className="show-list article-list" style={{display: 'block'}}>

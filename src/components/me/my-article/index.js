@@ -8,16 +8,6 @@ import Item from './Item.js';
 import './index.css';
 
 class ArticleList extends React.Component {
-  static propTypes = {
-    fetchArticles: PropTypes.func,
-    articles: PropTypes.array,
-    delArticle: PropTypes.func,
-    status: PropTypes.number
-  };
-
-  static defaultProps = {
-    articles: [1, 2, 3, 4, 5, 6, 7, 8]
-  };
 
   // constructor(props) {
   //   super(props);
@@ -80,6 +70,17 @@ class ArticleList extends React.Component {
       </div>
     );
   }
+
+  static propTypes = {
+    fetchArticles: PropTypes.func,
+    articles: PropTypes.array,
+    delArticle: PropTypes.func,
+    status: PropTypes.number
+  };
+
+  static defaultProps = {
+    articles: [1, 2, 3, 4, 5, 6, 7, 8]
+  };
 }
 
 export default ArticleList;

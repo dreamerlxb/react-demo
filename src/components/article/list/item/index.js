@@ -10,11 +10,6 @@ import { TOGGLE_ARTICLE_C, TOGGLE_ARTICLE_PRAISE } from '../../../../constants';
 
 import me from '../../../header/meUnauth.png';
 
-// import praise0 from '../../../../../images/praise_0.png'; // 点赞
-// import praise1 from '../../../../../images/praise_1.png';
-// import collection0 from '../../../../../images/collection_0.png'; // 点赞
-// import collection1 from '../../../../../images/collection_1.png';
-// import commentImg from '../../../../../images/comment.png';
 import './index.css';
 
 

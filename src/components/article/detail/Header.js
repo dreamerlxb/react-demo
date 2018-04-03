@@ -11,11 +11,6 @@ import {
 // import { fetchCount, toggle } from '../../../../actions/common.action';
 
 import me from '../../header/meUnauth.png';
-// import collection0 from '../../../../images/collection_0.png';
-// import collection1 from '../../../../images/collection_1.png';
-// import praise0 from '../../../../images/praise_0.png';
-// import praise1 from '../../../../images/praise_1.png';
-// import commentImg from '../../../../images/comment.png';
 
 import './Header.css';
 

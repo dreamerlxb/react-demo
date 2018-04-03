@@ -37,8 +37,8 @@
   border-top: 1px dotted #454545;
   display: block;
   position: absolute;
-  width: 400px;
-  top: 8px;
+  width: 370px;
+  top: 10px;
   left: 0;
 }
 
@@ -47,11 +47,7 @@
   border-top: 1px dotted #454545;
   display: block;
   position: absolute;
-  width: 400px;
-  top: 8px;
+  width: 370px;
+  top: 10px;
   right: 0;
-}
-
-.BraftEditor-controlBar .control-item.button {
-  width: 36px !important;
 }
