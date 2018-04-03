@@ -1,25 +1,26 @@
 .ant-carousel .slick-slide {
-    text-align: center;
-    height: 160px;
-    line-height: 160px;
-    background: #364d79;
-    overflow: hidden;
-  }
-  
-  .ant-carousel .slick-slide h3 {
-    color: #fff;
-  }
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  overflow: hidden;
+}
 
-  .templates-wrapper {
-    display: flex;
-    align-items: center;
-    width: 100%;
-  }
-  .templates-wrapper>span {
-    position: absolute;
-    z-index: 1;
-  }
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+}
 
-  .templates-wrapper .ant-carousel {
-    width: 100%;
-  }
+.templates-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.templates-wrapper>span {
+  position: absolute;
+  z-index: 1;
+}
+
+.templates-wrapper .ant-carousel {
+  width: 100%;
+}

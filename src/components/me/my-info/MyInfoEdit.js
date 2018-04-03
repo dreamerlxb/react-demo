@@ -58,66 +58,6 @@ export default class MyInfoEdit extends React.Component {
     this.props.modifyUserInfo({...this.props.user, name, gender, mobileNumber, email});
   }
 
-  /* eslint-disable */
-  // componentDidMount() {
-    // const me = this;
-    // this.uploader = Qiniu.uploader({
-    //   runtimes: 'html5,flash,html4',      // 上传模式，依次退化
-    //   browse_button: 'mypickfile',         // 上传选择的点选按钮，必需
-    //   uptoken_url: `${BASE_URL}Images/uploadToken`,         // Ajax请求uptoken的Url，强烈建议设置（服务端提供）
-    //   domain: 'mz-dx',     // bucket域名，下载资源时用到，必需
-    //   max_file_size: '100mb',             // 最大文件体积限制
-    //   flash_swf_url: 'https://cdn.staticfile.org/plupload/2.1.7/Moxie.swf',
-    //   max_retries: 3,                     // 上传失败最大重试次数
-    //   dragdrop: true,                     // 开启可拖曳上传
-    //   chunk_size: '4mb',                  // 分块上传时，每块的体积
-    //   unique_names: true,
-    //   multi_selection: false, // 上传单张图片
-    //   auto_start: true,                   // 选择文件后自动上传，若关闭需要自己绑定事件触发上传
-    //   filters: {
-    //     mime_types : [ //只允许上传图片
-    //         { title : "Image files", extensions : "jpg,jpeg,gif,png" },
-    //     ],
-    //     prevent_duplicates : false //不允许选取重复文件
-    //   },
-    //   init: {
-    //     FilesAdded: function(up, files) { // 文件添加进队列后，处理相关的事情
-
-    //     },
-    //     BeforeUpload: function(up, file) {
-    //       me.setState({showProgress: true});
-    //     },
-    //     UploadProgress: function(up, file) {
-    //       // 每个文件上传时，处理相关的事情
-    //       // console.log('UploadProgress');
-    //       // console.log(up);
-    //       // console.log(file);
-    //       me.setState({uploadPercent: file.percent});
-    //     },
-    //     FileUploaded: function(up, file, info) {
-    //       setAvatar(localStorage.getItem(LOGIN_USER_ID), {
-    //         mimeType: file.type,
-    //         key: file.id,
-    //         name: file.name,
-    //         url: `${QINIU_URL}${file.target_name}`,
-    //         size: file.size
-    //       }).then(value => {
-    //         message.success('图片上传成功');
-    //         me.props.fetchLoginUser();
-    //       }).catch(error => {
-    //         message.success('图片上传失败');
-    //       });
-    //     },
-    //     Error: function(up, err, errTip) {
-    //       message.error(errTip);
-    //     },
-    //     UploadComplete: function() {
-    //       me.setState({showProgress: false});
-    //     }
-    //   }
-    // });
-  // }
-
   render() {
     return (
 			<div className="info-form">

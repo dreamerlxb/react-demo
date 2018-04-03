@@ -23,15 +23,6 @@ class Login extends React.Component {
       pwdTip: '不能为空'
     };
   }
-  static propTypes = {
-    onSubmit: PropTypes.func,
-    isLogin: PropTypes.bool,
-    loginInfo: PropTypes.object,
-    fetchLoginUser: PropTypes.func,
-    status: PropTypes.number,
-    loginUserId: PropTypes.number,
-    loginToken: PropTypes.string
-  };
 
   handleSubmit(e) {
     e.preventDefault();
@@ -131,6 +122,16 @@ class Login extends React.Component {
       </div>
     );
   }
+
+  static propTypes = {
+    onSubmit: PropTypes.func,
+    isLogin: PropTypes.bool,
+    loginInfo: PropTypes.object,
+    fetchLoginUser: PropTypes.func,
+    status: PropTypes.number,
+    loginUserId: PropTypes.number,
+    loginToken: PropTypes.string
+  };
 }
 
 export default Login;
