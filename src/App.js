@@ -33,6 +33,16 @@ const store = createStore(
 )
 
 class App extends Component {
+
+  componentDidMount() {
+    var urlToChangeStream = 'http://127.0.0.1:3006/api/Allocations/change-stream?_format=event-stream&access_token=GI3Cfyo090HM2EimLdGYduRL83lQdzgrZuBYfIOfKwLrQMkvYytZwFYMafrPci4E';
+    var src = new EventSource(urlToChangeStream);
+    src.addEventListener('data', function(msg) {
+      var data = JSON.parse(msg.data);
+      console.log(data); // the change object
+    });
+  }
+
   render() {
     return (
       <Provider store={store}>
