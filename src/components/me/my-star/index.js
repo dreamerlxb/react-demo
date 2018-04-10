@@ -11,7 +11,6 @@ import PropTypes from 'prop-types';
 import ArticleItem from './ArticleItem.js';
 // import TopicItem from './TopicItem.js';
 import './index.css';
-// const userId = localStorage.getItem(LOGIN_USER_ID);
 
 class MyStar extends Component {
 

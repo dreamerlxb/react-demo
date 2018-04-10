@@ -10,8 +10,8 @@ class Item extends React.Component {
 
   render() {
     return (
-      <div className="topicitemcon">
-        <div className="topictx">
+      <div className="me-topic-item">
+        <div className="topict-title">
           <p><Link to={`/topic/2`}>#<em>title</em>#</Link>comments</p>
         </div>
         <div className="topicbot">

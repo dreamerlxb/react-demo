@@ -60,7 +60,7 @@ class MyOrder extends Component {
             <span>全部</span>
           </a>
           <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-          <a className="aactive" onClick={ () => this.setState({ status: 101 }) }>
+          <a className="active" onClick={ () => this.setState({ status: 101 }) }>
             <span>待支付</span>
           </a>
         </div>

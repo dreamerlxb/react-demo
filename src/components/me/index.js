@@ -14,27 +14,12 @@ import NotFound from '../notFound';
 import './index.css';
 
 class Me extends React.Component {
-  // static propTypes = {
-  //   children: PropTypes.element
-  // };
-
   // constructor(props) {
   //   super(props);
   //   this.state = {
   //     selectedKey: 'my-info'
   //   };
   // }
-
-  componentWillReceiveProps(nextProps) {
-    const path = nextProps.location.pathname.split('/');
-    console.log('Me = ', path);
-    // const pathStr = path.pop();
-    // if (pathStr === 'me') {
-    //   this.setState({selectedKey: 'my-info'});
-    // } else {
-    //   this.setState({selectedKey: pathStr});
-    // }
-  }
 
   // shouldComponentUpdate(nextProps, nextState, nextContext) {
   //   if (!nextProps.isLogin || (nextProps.loginInfo && nextProps.loginInfo.status !== 200)) {
@@ -64,6 +49,10 @@ class Me extends React.Component {
       </div>
     );
   }
+
+  // static propTypes = {
+  //   children: PropTypes.element
+  // };
 }
 
 export default Me;

@@ -11,7 +11,7 @@ import Divider from 'antd/lib/divider'
 // import BraftEditor from 'braft-editor'
 // import 'braft-editor/dist/braft.css'
 
-import Editor from '../../editor';
+import Editor from '../../common/editor';
 
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';

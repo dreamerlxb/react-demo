@@ -24,7 +24,7 @@ export default class OrderItem extends React.Component {
 
   renderItems() {
     if (this.props.items && this.props.items.length) {
-      const lis = this.props.items.map(item => (<li className="order orderDiv" key={item}><Item item={item} /></li>));
+      const lis = this.props.items.map(item => (<li className="order-item" key={item}><Item item={item} /></li>));
       return <ul className="group-cmpt-info">{lis} </ul>;
     }
     return <div>没有数据</div>;
@@ -34,15 +34,15 @@ export default class OrderItem extends React.Component {
     return (
       <div>
         <div className="order-info">
-          <span className="orderNumber">订单号：{moment().format('YYYYMMDDHHmmss')}</span>
-          <span className="orderTime">日期：{moment().format('YYYY-MM-DD')}</span>
+          <span>订单号：{moment().format('YYYYMMDDHHmmss')}</span>
+          <span>日期：{moment().format('YYYY-MM-DD')}</span>
         </div>
         {this.renderItems()}
-        <div className="order-pay-info">
-          <span className="orderNumber">支付状态：{this.props.order.isPaid ? '已支付' : '未支付'}</span>&nbsp;&nbsp;&nbsp;
+        <div>
+          <span>支付状态：{this.props.order.isPaid ? '已支付' : '未支付'}</span>&nbsp;&nbsp;&nbsp;
           <a>去支付 >></a>
           <span style={{ flexGrow: 1 }} />
-          <span className="orderNumber">总费用：{this.caculateCost()}￥</span>
+          <span>总费用：{this.caculateCost()}￥</span>
         </div>
       </div>
     );

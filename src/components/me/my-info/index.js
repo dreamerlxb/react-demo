@@ -1,11 +1,15 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 // import message from 'antd/lib/message';
+import Icon from 'antd/lib/icon';
+import Divider from 'antd/lib/divider';
 // import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 // import MyInfoShow from './MyInfo.js';
 // import MyInfoEdit from './MyInfoEdit.js';
 // import { modifyUserInfo, fetchLoginUser } from '../../../actions/users.action';
+
+import './index.css';
 
 class MyInfo extends React.Component {
   // static propTypes = {
@@ -18,17 +22,64 @@ class MyInfo extends React.Component {
   // };
 
   render() {
-    return (<div> This is my Info !!</div>);
-    // if (this.state.isEdit) {
-    //   return (
-    //     <MyInfoEdit
-    //       user={this.props.user}
-    //       onBackClick={() => this.setState({ isEdit: false })}
-    //       modifyUserInfo={ this.props.modifyUserInfo }
-    //       fetchLoginUser={ this.props.fetchLoginUser }/>
-    //   );
-    // }
-    // return (<MyInfoShow user={this.props.user} onEditClick={() => this.setState({isEdit: true})}/>);
+    return (
+      <div className="person-container">
+        <div className="main-top">
+          <a className="avatar" href="http://www.jianshu.com/u/cd71ddfdf5bf">
+            <img src="http://placehold.it/80X80" alt="240" />
+          </a>
+          <div className="detail">
+            <div className="title">
+              <a className="name" href="/u/cd71ddfdf5bf">XXXXX</a>
+              <Icon type="man" style={{ marginLeft: 5 }} />
+            </div>
+            <ul className="info">
+              <li>
+                <a className="meta-block" href="/users/cd71ddfdf5bf/following">
+                  <p>11</p>
+                  <p>
+                    关注 <Icon type="arrow" />
+                  </p>
+                </a>
+                <Divider type="vertical" />
+              </li>
+              <li>
+                <a className="meta-block" href="/users/cd71ddfdf5bf/followers">
+                  <p>0</p>
+                  <p>粉丝 <Icon type="arrow" /></p>
+                </a>
+                <Divider type="vertical" />
+              </li>
+              <li>
+                <a class="meta-block" href="/u/cd71ddfdf5bf">
+                  <p>14</p>
+                  <p>文章 <Icon type="arrow" /></p>
+                </a>
+                <Divider type="vertical" />
+              </li>
+              <li>
+                <div className="meta-block">
+                  <p>4853</p>
+                  <div>字数</div>
+                </div>
+                <Divider type="vertical" />
+              </li>
+              <li>
+                <div className="meta-block">
+                  <p>1</p>
+                  <div>收获喜欢</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="edit">
+            <a className="name" href="/u/cd71ddfdf5bf">
+              <Icon type="edit" style={{ marginLeft: 5, fontSize: 18 }} />
+            </a>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 

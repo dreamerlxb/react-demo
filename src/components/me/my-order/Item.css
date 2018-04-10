@@ -28,6 +28,10 @@
   cursor: pointer;
 }
 
+.cmpt-info>.main * {
+  text-align: left;
+}
+
 .cmpt-info>.pic {
   width: 170px;
   height: 130px;
