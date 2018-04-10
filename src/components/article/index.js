@@ -10,6 +10,7 @@ import { Switch, Route, Link } from 'react-router-dom';
 import ArticleList from './list';
 import NotFound from '../notFound';
 import CreateArticle from './create';
+import ArticleDetail from './detail';
 // import { fetchTopics } from '../../../../actions/topics.action';
 import './index.css';
 
@@ -101,21 +102,6 @@ class TopicItem extends Component {
  */
 class Article extends Component {
 
-  // componentWillMount() {
-  //   this.props.fetchTopics({
-  //     include: [
-  //       'images',
-  //       {
-  //         relation: 'user',
-  //         scope: { include: 'avatar' }
-  //       }
-  //     ],
-  //     skip: 0,
-  //     limit: 10,
-  //     order: 'created DESC'
-  //   });
-  // }
-
   render() {
     return (
       <div className="article-container">
@@ -123,7 +109,7 @@ class Article extends Component {
           <Switch>
               <Route exact path='/article' component={ArticleList} />
               <Route path="/article/create" exact component={ CreateArticle }/>
-              <Route path="/article/:topicId" exact component={ CreateArticle }/>
+              <Route path="/article/:topicId" exact component={ ArticleDetail }/>
               <Route exact component={ NotFound } />
           </Switch>
         </div>

@@ -6,16 +6,6 @@
   /*margin: 20px;*/
 }
 
-h4.article-title {
-  font-size: 20px;
-}
-
-.article-creator {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .article-creator-img {
   height: 36px;
   width: 36px;
@@ -54,12 +44,6 @@ h4.article-title {
 .article-content {
   margin: 20px auto;
   padding: 20px;
-}
-span.content_num {
-  text-align: right;
-  padding: 10px;
-  float: right;
-  font-size: 14px;
 }
 
 .topic-img-show {

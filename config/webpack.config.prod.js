@@ -11,8 +11,8 @@ const InterpolateHtmlPlugin = require('./plugins/InterpolateHtmlPlugin');
 
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
-// const eslintFormatter = require('react-dev-utils/eslintFormatter');
-const eslintFormatter = require('./plugins/eslintFormatter');
+const eslintFormatter = require('react-dev-utils/eslintFormatter');
+// const eslintFormatter = require('./plugins/eslintFormatter');
 
 // const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const ModuleScopePlugin = require('./plugins/ModuleScopePlugin');

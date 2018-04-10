@@ -5,8 +5,6 @@ import Icon from 'antd/lib/icon';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import './Item.css';
-// import commentImg from '../../../images/img_17.png';
-// import likeImg from '../../../images/img_11.png';
 
 class Item extends React.Component {
 

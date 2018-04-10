@@ -1,51 +1,7 @@
 .orderDiv {
-  padding: 0 20px;
   margin-bottom: 20px;
   background: #fff;
   border-bottom: 1px dashed #ccc;
-}
-
-.cmpt-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 0;
-}
-
-.cmpt-info>.main {
-  flex-grow: 1;
-  height: 130px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0 10px;
-}
-
-.cmpt-info>.main>div {
-  display: flex;
-  flex-direction: column;
-}
-
-.cmpt-info>.main p {
-  line-height: 24px;
-  font-size: 14px;
-  color: #666;
-  float: left;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.cmpt-info>.pic {
-  width: 170px;
-  height: 130px;
-  border: 1px solid #ddd;
-}
-
-.cmpt-info>.pic>img {
-  width: 100%;
-  height: 130px;
 }
 
 .order-info {
@@ -63,39 +19,7 @@
   text-decoration: underline;
 }
 
-.order_state {
-  padding: 0 20px;
-  border-left: 1px dashed #ddd;
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.order_state>div {
-  margin-bottom: 20px;
-}
-
 .group-cmpt-info {
   list-style: none;
   padding-left: 0;
-}
-
-.section-order-item {
-  padding: 0 20px;
-  margin-bottom: 20px;
-  background: #fff;
-  border-bottom: 1px dashed #ccc;
-}
-
-.section-order-item .order-pay-info {
-  line-height: 36px;
-  color: #333;
-  cursor: pointer;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  align-content: space-around;
 }

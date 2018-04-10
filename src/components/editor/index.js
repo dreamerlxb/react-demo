@@ -17,7 +17,7 @@ class Editor extends Component {
   render() {
     const editorProps = {
       height: 500,
-      placeholder: this.props.content,
+      placeholder: this.props.placeholder,
       onChange: this.handleChange,
       onHTMLChange: this.handleHTMLChange,
       media: {
@@ -76,7 +76,7 @@ class Editor extends Component {
   }
 
   static propTypes = {
-    content: PropTypes.string,
+    placeholder: PropTypes.string,
   };
 }
 

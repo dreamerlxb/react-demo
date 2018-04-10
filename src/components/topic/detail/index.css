@@ -9,3 +9,9 @@
 .article-comment {
   margin: 10px 0;
 }
+
+.article-comment span.content-num {
+  text-align: right;
+  padding: 10px;
+  font-size: 14px;
+}

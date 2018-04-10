@@ -22,32 +22,3 @@
 .article-item .article-input {
   width: 90%;
 }
-
-.with-line {
-  font-size: 14px;
-  color: #454545;
-  margin: 10px auto;
-  position: relative;
-  text-align: center;
-  font-weight: bold;
-}
-
-.with-line:before {
-  content: "";
-  border-top: 1px dotted #454545;
-  display: block;
-  position: absolute;
-  width: 370px;
-  top: 10px;
-  left: 0;
-}
-
-.with-line:after {
-  content: "";
-  border-top: 1px dotted #454545;
-  display: block;
-  position: absolute;
-  width: 370px;
-  top: 10px;
-  right: 0;
-}

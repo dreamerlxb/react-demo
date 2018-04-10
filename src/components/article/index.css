@@ -36,10 +36,6 @@
     cursor: pointer;
 }
 
-.liactive {
-    border-bottom: 2px white solid;
-}
-
 .home-diary-top {
     margin-top: 20px;
     height: 25px;

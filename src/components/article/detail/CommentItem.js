@@ -16,27 +16,18 @@ import './CommentItem.css';
 
 class CommentItem extends React.Component {
 
-  componentWillReceiveProps(nextProps) {
-    // if (nextProps.status === 400 && nextProps.reply.commentId === this.props.comment.id) {
-    //   message.success('回复成功');
-    //   this.setState({reply: false});
-    //   this.fetchReplies();
-    // }
-  }
-
-  // componentWillMount() {
-  //   this.fetchReplies();
-  // }
-
   renderReplies() {
     // let repliesArr = this.props.comment.replies;
+    if (!this.props.comment.replies) {
+      return;
+    }
     return this.props.comment.replies.map((item, index) => {
       return (
         <li key={index}>
           <span>
             <em>{item.user.name}</em>&nbsp;&nbsp;回复&nbsp;&nbsp;<em>{item.replyTo.name}</em>&nbsp;:&nbsp;{item.content}
           </span>
-          <a href="javascript;" onClick={() => this.setState({reply: !this.state.reply, replyTo: item.user})}>回复</a>
+          <a href="javascript;" onClick={() => this.setState({ reply: !this.state.reply, replyTo: item.user })}>回复</a>
         </li>
       );
     });
@@ -46,16 +37,18 @@ class CommentItem extends React.Component {
     if (this.state.reply) {
       return (
         <form className="article-comment" onSubmit={this.handleSubmit}>
-          <input type="hidden" value={this.props.comment.user.id} name="toUserId"/>
-          <Input placeholder={this.state.replyTo ? `回复${this.state.replyTo.name}` : '回复评论' }
-            size="large"
-            maxLength="100"
-            name="content"
-            type="textarea"
-            autosize={{minRows: 2, maxRows: 2}}/>
-          <span className="content_num">100字</span>
+          <input type="hidden" value={2} name="toUserId" />
+          <div style={{display: 'flex', flexDirection: 'column'}}>
+            <Input placeholder={this.state.replyTo ? `回复${this.state.replyTo.name}` : '回复评论'}
+              size="large"
+              maxLength="100"
+              name="content"
+              type="textarea"
+              autosize={{ minRows: 2, maxRows: 2 }} />
+            <span className="content-num">100字</span>
+          </div>
           <Button size="large" type="primary" htmlType="submit">提交回复</Button> &nbsp;&nbsp;&nbsp;&nbsp;
-          <Button size="large" type="primary" onClick={() => this.setState({reply: false}) }>取消</Button>
+          <Button size="large" type="primary" onClick={() => this.setState({ reply: false })}>取消</Button>
         </form>
       );
     }
@@ -66,22 +59,22 @@ class CommentItem extends React.Component {
       <div className="comment-item">
         <div className="comment-item-user">
           <div className="commain_userimg">
-            <img src={ me } alt="User avatar"/>
+            <img src={me} alt="User avatar" />
           </div>
           <div className="comment-usernam">
             <p className="pname">Comment user name</p>
             <p className="ptime">{moment().format('YYYY-MM-DD HH:mm:ss')}</p>
           </div>
-          <div style={{flexGrow: 1}}/>
+          <div style={{ flexGrow: 1 }} />
           <div className="comment-item-op">
-            <span style={{width: 10}}/>
-            <a className="comment-replybtn" onClick={() => this.setState({reply: !this.state.reply, replyTo: null}) }>回复</a>
+            <span style={{ width: 10 }} />
+            <a className="comment-replybtn" onClick={() => this.setState({ reply: !this.state.reply, replyTo: null })}>回复</a>
           </div>
         </div>
         <div className="commain_con">
           <p> Comment content </p>
           <ul className="comment-replies-list">
-            { this.renderReplies() }
+            {this.renderReplies()}
           </ul>
         </div>
         {this.renderReplyDiv()}
@@ -122,7 +115,7 @@ class CommentItem extends React.Component {
       message.info('请先登录');
       return;
     }
-    const form  = e.target;
+    const form = e.target;
     const content = form.content.value;
     if (content.length === 0) {
       message.info('评论不能为空');

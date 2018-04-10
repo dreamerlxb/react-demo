@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
 import Pagination from 'antd/lib/pagination';
+import Divider from 'antd/lib/divider';
 import CommentItem from '../../common/comment/Item';
 
 // import { FETCH_TOPIC_COMMENTS } from '../../../constants';
@@ -13,12 +14,6 @@ import './CommentList.css';
 
 // 话题评论组件
 class CommentList extends Component {
-
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.comment && nextProps.comment.topicId === this.props.topicId) {
-  //     this.fetchTopicComments();
-  //   }
-  // }
 
   // fetchTopicComments = (page = 0, pageSize = 10) => {
   //   this.props.fetchComments(FETCH_TOPIC_COMMENTS, {
@@ -42,8 +37,8 @@ class CommentList extends Component {
   render() {
     return (
       <div className="topic-comment">
-        <div className="topic-comment-title"> 话题评论 </div>
-        <ul style={{listStyle: 'none'}}>
+        <Divider dashed>话题评论</Divider>
+        <ul style={{listStyle: 'none', paddingLeft: 0}}>
           { this.props.comments.map((item, index) => <li key={index}><CommentItem comment={item}/></li>) }
         </ul>
         <Pagination style={{ margin: '10px 0', padding: '10px 0'}}

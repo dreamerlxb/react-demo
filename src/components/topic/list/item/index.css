@@ -8,21 +8,21 @@
   padding: 20px 10px;
 }
 
-.tp_userimg {
+.tp-user-img {
   height: 36px;
   width: 36px;
   border-radius: 50%;
   margin-right: 10px;
 }
 
-.tp_userimg img {
+.tp-user-img img {
   height: 100%;
   width: 100%;
   border-radius: 50%;
   display: block;
 }
 
-.tp_comment>a {
+.tp-comment>a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,7 +37,7 @@
   border: 1px solid #ccc;
 }
 
-.tp_comment>a img {
+.tp-comment>a img {
   width: 16px;
   margin: 4px;
   height: 16px;

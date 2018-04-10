@@ -13,16 +13,11 @@ import Header from './Header.js';
 // import { fetchTopic } from '../../../../actions/topics.action';
 // import { toggle } from '../../../../actions/common.action.js';
 import { LOGIN_USER_ID } from '../../../constants';
-
 import './index.css';
 
-class TopicDetail extends Component {
+const { TextArea } = Input;
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.comment && nextProps.comment.topicId === this.props.topic.id) {
-  //     message.success('评论成功');
-  //   }
-  // }
+class TopicDetail extends Component {
 
   // componentWillMount() {
   //   const userId = localStorage.getItem(LOGIN_USER_ID);
@@ -56,18 +51,19 @@ class TopicDetail extends Component {
           topic={this.props.topic}
           praise={this.props.praise}
           collection={this.props.collection}
-          toggle={ (modelName, type, typeId, marked) => this.props.toggle(modelName, type, { typeId, marked, type: 'topic' })}/>
+          toggle={(modelName, type, typeId, marked) => this.props.toggle(modelName, type, { typeId, marked, type: 'topic' })} />
         <form className="article-comment" onSubmit={this.handleSubmit}>
-          <Input placeholder="文章评论"
-            size="large"
-            maxLength="140"
-            name="content"
-            type="textarea"
-            autosize={{minRows: 3, maxRows: 3}}/>
-          <span className="content_num">140字</span>
+          <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+            <TextArea placeholder="文章评论"
+              size="large"
+              maxLength="140"
+              name="content"
+              autosize={{ minRows: 3, maxRows: 3 }} />
+            <span className="content-num">140字</span>
+          </div>
           <Button size="large" htmlType="submit" type="primary">提交评论</Button>
         </form>
-        { <CommentList topicCommentCount={this.props.topicCommentCount} topicId={topicId}/> }
+        {<CommentList topicCommentCount={this.props.topicCommentCount} topicId={topicId} />}
       </div>
     );
   }
@@ -79,7 +75,7 @@ class TopicDetail extends Component {
       message.info('请先登录');
       return;
     }
-    const form  = e.target;
+    const form = e.target;
     const content = form.content.value;
     if (content.length === 0) {
       message.info('评论不能为空');

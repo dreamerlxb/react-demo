@@ -58,12 +58,12 @@ class Item extends Component {
     if (this.props.topic && this.props.topic.user) {
       return (
         <div className="topic-user">
-          <div className="tp_userimg">
+          <div className="tp-user-img">
             <img src={ me } alt="img" />
           </div>
-          <div className="tp_usertx">
-            <p className="tp_usernam">The topic author's name !!</p>
-            <p className="tp_sendtime">{moment().format('YYYY-MM-DD HH:mm')}</p>
+          <div>
+            <p>The topic author's name !!</p>
+            <p>{moment().format('YYYY-MM-DD HH:mm')}</p>
           </div>
         </div>
       );
@@ -76,14 +76,14 @@ class Item extends Component {
       <div className="topicitemcon topic-list-item">
         <div className="topicbot" style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
           { this.renderAuthor() }
-          <div className="tp_comment">
-            <a className="praise_topic_btn" >
+          <div className="tp-comment">
+            <a>
               <Icon type="form" />
             </a>
-            <a className="follow_btn" onClick={ () => this.props.toggle('Collections', TOGGLE_TOPIC_C, this.props.topic.id, this.isCollected) }>
+            <a onClick={ () => this.props.toggle('Collections', TOGGLE_TOPIC_C, this.props.topic.id, this.isCollected) }>
               <Icon type="star" />
             </a>
-            <a className="comNum topic_detail" onClick={ () => this.props.toggle('Praises', TOGGLE_TOPIC_PRAISE, this.props.topic.id, this.isPraised) }>
+            <a onClick={ () => this.props.toggle('Praises', TOGGLE_TOPIC_PRAISE, this.props.topic.id, this.isPraised) }>
               <Icon type="like" />
             </a>
           </div>

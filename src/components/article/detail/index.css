@@ -10,9 +10,8 @@
   margin: 10px 0 auto;
 }
 
-span.content_num {
+span.content-num {
   text-align: right;
   padding: 10px;
-  float: right;
   font-size: 14px;
 }

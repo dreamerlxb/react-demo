@@ -14,56 +14,31 @@ import CommentList from './CommentList';
 import { LOGIN_USER_ID } from '../../../constants';
 
 import './index.css';
+const {TextArea} = Input;
 
 class ArticleDetail extends Component {
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.comment && nextProps.comment.articleId === this.props.article.id) {
-  //     message.success('评论成功');
-  //   }
-  // }
-
-  // componentWillMount() {
-  //   const userId = localStorage.getItem(LOGIN_USER_ID);
-  //   this.props.fetchArticle(this.props.params.articleId, { // eslint-disable-line
-  //     include: [
-  //       'image',
-  //       {
-  //         relation: 'user',
-  //         scope: { include: 'avatar' }
-  //       }, {
-  //         relation: 'collections',
-  //         scope: { where: { userId } }
-  //       }, {
-  //         relation: 'praises',
-  //         scope: { where: { userId } }
-  //       }
-  //     ]
-  //   });
-  //   this.props.fetchCount('Collections', FETCH_ARTICLE_C_COUNT, { articleId: this.props.params.articleId }); // eslint-disable-line
-  //   this.props.fetchCount('Praises', FETCH_ARTICLE_P_COUNT, { articleId: this.props.params.articleId }); // eslint-disable-line
-  //   this.props.fetchCount('Comments', FETCH_ARTICLE_COMMENT_COUNT, { articleId: this.props.params.articleId }); // eslint-disable-line
-  // }
-
   render() {
-    const articleId = +this.props.params.articleId; // eslint-disable-line
+    const articleId = +this.props.match.params.topicId;// eslint-disable-line;
+    // console.log(this.props.params);
     return (
       <div className="article-detail-info">
         <Header article={this.props.article}
-          articleCollectCount={this.props.articleCollectCount}
-          articlePraiseCount={this.props.articlePraiseCount}
-          articleCommentCount={this.props.articleCommentCount}
+          collectCount={this.props.collectCount}
+          praiseCount={this.props.praiseCount}
+          commentCount={this.props.commentCount}
           praise={this.props.praise}
           collection={this.props.collection}
           toggle={ (modelName, type, typeId, marked) => this.props.toggle(modelName, type, { typeId, marked, type: 'article' })}/>
         <form className="article-comment" onSubmit={this.handleSubmit}>
-          <Input placeholder="文章评论"
-            size="large"
-            maxLength="140"
-            name="content"
-            type="textarea"
-            autosize={{minRows: 4, maxRows: 4}}/>
-          <span className="content_num">140字</span>
+          <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+            <TextArea placeholder="文章评论"
+              size="large"
+              maxLength="140"
+              name="content"
+              autosize={{minRows: 3, maxRows: 3}}/>
+            <span className="content-num">140字</span>
+          </div>
           <Button size="large" type="primary" htmlType="submit">提交评论</Button>
         </form>
         { <CommentList articleCommentCount={this.props.articleCommentCount} articleId={articleId}/> }
@@ -101,15 +76,16 @@ class ArticleDetail extends Component {
     comment: PropTypes.object,
     collection: PropTypes.object,
     praise: PropTypes.object,
-    articleCollectCount: PropTypes.number,
-    articleCommentCount: PropTypes.number,
-    articlePraiseCount: PropTypes.number
+    collectCount: PropTypes.number,
+    commentCount: PropTypes.number,
+    praiseCount: PropTypes.number
   };
 
   static defaultProps = {
     article: {
       create: '',
-      content: ''
+      content: '',
+      title: "Article Title!!!"
     }
   };
 }

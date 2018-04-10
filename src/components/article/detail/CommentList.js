@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
 import Pagination from 'antd/lib/pagination';
+import Divider from 'antd/lib/divider';
 import Item from './CommentItem';
 import { FETCH_ARTICLE_COMMENTS } from '../../../constants';
 // import { fetchComments } from '../../../../actions/comment.action.js';
@@ -11,21 +12,11 @@ import './CommentList.css';
 
 class CommentList extends Component {
 
-  componentWillReceiveProps(nextProps) {
-    // if (nextProps.comment && nextProps.comment.articleId === this.props.articleId) {
-    //   this.fetchArticleComments();
-    // }
-  }
-
-  componentWillMount() {
-    // this.fetchArticleComments();
-  }
-
   render() {
     return (
       <div style={{margin: '20px 0px'}}>
-        <div className="topic-comment-title">评论</div>
-        <ul>
+        <Divider dashed>评论</Divider>
+        <ul style={{listStyle: 'none', paddingLeft: 0}}>
           { this.props.comments.map((item, index) => <li key={index}><Item comment={item}/></li>) }
         </ul>
         <Pagination style={{ margin: '10px 0', padding: '10px 0'}}
@@ -52,7 +43,7 @@ class CommentList extends Component {
 
   static propTypes = {
     articleId: PropTypes.number,
-    articleCommentCount: PropTypes.number,
+    commentCount: PropTypes.number,
     comments: PropTypes.array,
     fetchComments: PropTypes.func
   };
