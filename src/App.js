@@ -4,7 +4,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import createHistory from 'history/createBrowserHistory'
 
-import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux';
+// import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux';
 
 import { Switch, Route } from 'react-router-dom';
 import Header from './components/header';
@@ -23,13 +23,13 @@ import reducers from './reducers';
 import './App.css';
 
 const history = createHistory();
-const middleware = routerMiddleware(history);
+// const middleware = routerMiddleware(history);
 const store = createStore(
   combineReducers({
-    ...reducers,
-    router: routerReducer
-  }),
-  applyMiddleware(middleware)
+    ...reducers
+    // ,router: routerReducer
+  })
+  // , applyMiddleware(middleware)
 )
 
 class App extends Component {
@@ -46,7 +46,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <ConnectedRouter history={history}>
+        {/* <ConnectedRouter history={history}> */}
           <div className="app">
             <Header />
             <Switch>
@@ -61,7 +61,7 @@ class App extends Component {
             </Switch>
             <Footer />
           </div>
-        </ConnectedRouter>
+        {/* </ConnectedRouter> */}
       </Provider>
     );
   }
