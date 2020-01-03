@@ -26,6 +26,16 @@ const Option = Select.Option;
 
 class CreateArticle extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      imageUrl: 'http://a.hiphotos.baidu.com/image/pic/item/500fd9f9d72a6059f550a1832334349b023bbae3.jpg',
+      articleType: '0',
+      isAccept: true,
+      content: null
+    };
+  }
+
   componentDidMount() {
     // 动态修改编辑器下的button的type（在浏览器中button的type默认值为submit）
     const btns = document.querySelectorAll(".BraftEditor-controlBar button");
@@ -95,12 +105,12 @@ class CreateArticle extends Component {
     );
   }
 
-  state = {
-    imageUrl: 'http://a.hiphotos.baidu.com/image/pic/item/500fd9f9d72a6059f550a1832334349b023bbae3.jpg',
-    articleType: '0',
-    isAccept: true,
-    content: null
-  };
+  // state = {
+  //   imageUrl: 'http://a.hiphotos.baidu.com/image/pic/item/500fd9f9d72a6059f550a1832334349b023bbae3.jpg',
+  //   articleType: '0',
+  //   isAccept: true,
+  //   content: null
+  // };
 
   handleSubmit = e => {
     e.preventDefault();

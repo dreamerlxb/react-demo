@@ -60,47 +60,91 @@ class TopicItem extends Component {
     );
   }
 
-  static propTypes = {
-    topic: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      content: PropTypes.string.isRequired,
-      images: PropTypes.array,
-      user: PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired,
-        avatar: PropTypes.shape({
-          id: PropTypes.number.isRequired,
-          url: PropTypes.string.isRequired
-        })
-      }).isRequired
-    })
-  };
+  // static propTypes = {
+  //   topic: PropTypes.shape({
+  //     id: PropTypes.number.isRequired,
+  //     title: PropTypes.string.isRequired,
+  //     content: PropTypes.string.isRequired,
+  //     images: PropTypes.array,
+  //     user: PropTypes.shape({
+  //       id: PropTypes.number.isRequired,
+  //       name: PropTypes.string.isRequired,
+  //       avatar: PropTypes.shape({
+  //         id: PropTypes.number.isRequired,
+  //         url: PropTypes.string.isRequired
+  //       })
+  //     }).isRequired
+  //   })
+  // };
 
-  static defaultProps = {
-    topic: {
-      images: [
-        "http://f.hiphotos.baidu.com/image/pic/item/503d269759ee3d6db032f61b48166d224e4ade6e.jpg",
-        "http://f.hiphotos.baidu.com/image/pic/item/503d269759ee3d6db032f61b48166d224e4ade6e.jpg",
-        "http://f.hiphotos.baidu.com/image/pic/item/503d269759ee3d6db032f61b48166d224e4ade6e.jpg",
-        "http://f.hiphotos.baidu.com/image/pic/item/503d269759ee3d6db032f61b48166d224e4ade6e.jpg",
-        "http://f.hiphotos.baidu.com/image/pic/item/503d269759ee3d6db032f61b48166d224e4ade6e.jpg",
-      ],
-      user: {
-        id: 1,
-        name: 'user'
-      },
-      id: 0,
-      title: 'title',
-      content: 'content'
-    }
-  };
+  // static defaultProps = {
+  //   topic: {
+  //     images: [
+  //       "http://f.hiphotos.baidu.com/image/pic/item/503d269759ee3d6db032f61b48166d224e4ade6e.jpg",
+  //       "http://f.hiphotos.baidu.com/image/pic/item/503d269759ee3d6db032f61b48166d224e4ade6e.jpg",
+  //       "http://f.hiphotos.baidu.com/image/pic/item/503d269759ee3d6db032f61b48166d224e4ade6e.jpg",
+  //       "http://f.hiphotos.baidu.com/image/pic/item/503d269759ee3d6db032f61b48166d224e4ade6e.jpg",
+  //       "http://f.hiphotos.baidu.com/image/pic/item/503d269759ee3d6db032f61b48166d224e4ade6e.jpg",
+  //     ],
+  //     user: {
+  //       id: 1,
+  //       name: 'user'
+  //     },
+  //     id: 0,
+  //     title: 'title',
+  //     content: 'content'
+  //   }
+  // };
 }
+
+TopicItem.propTypes = {
+  topic: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    images: PropTypes.array,
+    user: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        url: PropTypes.string.isRequired
+      })
+    }).isRequired
+  })
+};
+
+TopicItem.defaultProps = {
+  topic: {
+    images: [
+      "http://f.hiphotos.baidu.com/image/pic/item/503d269759ee3d6db032f61b48166d224e4ade6e.jpg",
+      "http://f.hiphotos.baidu.com/image/pic/item/503d269759ee3d6db032f61b48166d224e4ade6e.jpg",
+      "http://f.hiphotos.baidu.com/image/pic/item/503d269759ee3d6db032f61b48166d224e4ade6e.jpg",
+      "http://f.hiphotos.baidu.com/image/pic/item/503d269759ee3d6db032f61b48166d224e4ade6e.jpg",
+      "http://f.hiphotos.baidu.com/image/pic/item/503d269759ee3d6db032f61b48166d224e4ade6e.jpg",
+    ],
+    user: {
+      id: 1,
+      name: 'user'
+    },
+    id: 0,
+    title: 'title',
+    content: 'content'
+  }
+};
 
 /**
  * 赛客发表的文章
  */
 class Article extends Component {
+
+  constructor(props){
+      super(props);//第一步，这是必须的
+      //不能调用state
+      this.state = {
+          index: 0
+      };
+  }
 
   render() {
     return (
@@ -130,27 +174,44 @@ class Article extends Component {
     );
   }
 
-  state = {
-    index: 0
-  };
+  // state = {
+  //   index: 0
+  // };
 
-  static propTypes = {
-    topics: PropTypes.array,
-    children: PropTypes.element,
-    fetchTopics: PropTypes.func
-  };
+  // static propTypes = {
+  //   topics: PropTypes.array,
+  //   children: PropTypes.element,
+  //   fetchTopics: PropTypes.func
+  // };
 
-  static defaultProps = {
-    topics: [
-      { id: 1 },
-      { id: 2 },
-      { id: 3 },
-      { id: 4 },
-      { id: 5 },
-      { id: 6 }
-    ]
-  };
+  // static defaultProps = {
+  //   topics: [
+  //     { id: 1 },
+  //     { id: 2 },
+  //     { id: 3 },
+  //     { id: 4 },
+  //     { id: 5 },
+  //     { id: 6 }
+  //   ]
+  // };
 }
+
+Article.prototype = {
+  topics: PropTypes.array,
+  children: PropTypes.element,
+  fetchTopics: PropTypes.func
+};
+
+Article.defaultProps = {
+  topics: [
+    { id: 1 },
+    { id: 2 },
+    { id: 3 },
+    { id: 4 },
+    { id: 5 },
+    { id: 6 }
+  ]
+};
 
 export default Article;
 
