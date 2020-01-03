@@ -193,7 +193,12 @@ module.exports = {
             use: [
               'style-loader',
               "css-loader",
-              "less-loader"
+              {
+                loader: "less-loader",
+                options: {
+                  javascriptEnabled: true
+                }
+              }
             ]
           },
           {
