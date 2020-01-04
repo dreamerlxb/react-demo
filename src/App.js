@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
 //, applyMiddleware
-import { createStore, combineReducers } from 'redux';
+// import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 // import createHistory from 'history/createBrowserHistory'
 
 // import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux';
+import { ConnectedRouter } from 'connected-react-router'
+import configureStore, { history } from './reducers/configureStore'
 
 import { Switch, Route } from 'react-router-dom';
 import Header from './components/header';
@@ -19,27 +21,28 @@ import Topic from './components/topic';
 import EchartsDemo from './components/charts';
 import NotFound from './components/notFound';
 
-import reducers from './reducers';
+// import reducers from './reducers';
 
 import './App.css';
 
 // const history = createHistory();
 // const middleware = routerMiddleware(history);
-const store = createStore(
-  combineReducers({
-    ...reducers
-    // ,router: routerReducer
-  })
-  // , applyMiddleware(middleware)
-)
+const store = configureStore(/* provide initial state if any */);
+//     createStore(
+//   combineReducers({
+//     ...reducers
+//     // ,router: routerReducer
+//   })
+//   // , applyMiddleware(middleware)
+// )
 
 class App extends Component {
 
   componentDidMount() {
     const urlToChangeStream = 'http://127.0.0.1:3006/api/Allocations/change-stream?_format=event-stream&access_token=GI3Cfyo090HM2EimLdGYduRL83lQdzgrZuBYfIOfKwLrQMkvYytZwFYMafrPci4E';
-    var src = new EventSource(urlToChangeStream);
+    const src = new EventSource(urlToChangeStream);
     src.addEventListener('data', function(msg) {
-      var data = JSON.parse(msg.data);
+      const data = JSON.parse(msg.data);
       console.log(data); // the change object
     });
   }
@@ -47,7 +50,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        {/* <ConnectedRouter history={history}> */}
+         <ConnectedRouter history={history}>
           <div className="app">
             <Header />
             <Switch>
@@ -62,7 +65,7 @@ class App extends Component {
             </Switch>
             <Footer />
           </div>
-        {/* </ConnectedRouter> */}
+         </ConnectedRouter>
       </Provider>
     );
   }

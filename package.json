@@ -8,6 +8,7 @@
     "autoprefixer": "9.7.3",
     "braft-editor": "^2.3.8",
     "chalk": "3.0.0",
+    "connected-react-router": "^6.6.1",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
     "echarts": "^4.6.0",
