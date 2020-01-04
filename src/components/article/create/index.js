@@ -146,7 +146,7 @@ class CreateArticle extends Component {
       userId
     };
     this.props.publishWithImage({article: { title, abstract, type, tags: labels.split(','), image, userId }});
-  }
+  };
 
   static propTypes = {
     publishWithImage: PropTypes.func,

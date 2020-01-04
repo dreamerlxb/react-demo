@@ -62,18 +62,18 @@ class Editor extends Component {
           )
         }
       }]
-    }
+    };
 
     return (<BraftEditor ref={instance => this.editorInstance = instance} {...editorProps}/>);
   }
 
   handleChange = content => {
     console.log('content = ', content)
-  }
+  };
 
   handleHTMLChange = html => {
     console.log('html = ', html)
-  }
+  };
 
   static propTypes = {
     placeholder: PropTypes.string,
