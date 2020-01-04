@@ -138,29 +138,6 @@ TopicItem.defaultProps = {
  */
 class Article extends Component {
 
-  // constructor(props) {
-  //     super(props);//第一步，这是必须的
-  //     //不能调用state
-  //     this.state = {
-  //         index: 0
-  //     };
-  // }
-
-  // static propTypes = {
-  //   articles: PropTypes.array
-  // };
-  //
-  // static defaultProps = {
-  //   topics: [
-  //     { id: 1 },
-  //     { id: 2 },
-  //     { id: 3 },
-  //     { id: 4 },
-  //     { id: 5 },
-  //     { id: 6 }
-  //   ]
-  // };
-
   render() {
     return (
       <div className="article-container">
@@ -180,7 +157,7 @@ class Article extends Component {
           </span>
           <div className="right-sidebar-topic-list">
             <div className="home-diary-top">
-              <span /><p><Button type="link">热门话题</Button></p>
+              <span/><Button type="link">热门话题</Button>
             </div>
             {this.props.topics.map(item => <TopicItem key={item.id} />)}
           </div>

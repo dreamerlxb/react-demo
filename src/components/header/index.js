@@ -95,8 +95,8 @@ class Header extends React.Component {
                 </div>
                 {/* <div className="nav"> */}
                 <Menu mode="horizontal" className="nav"
-                    onClick={this.handleClick}
-                    selectedKeys={[this.state.current]} defaultSelectedKeys={['home']} onSelect={this.handleMenuSelect}>
+                    onClick={this.handleClick} selectedKeys={[this.state.current]}
+                      defaultSelectedKeys={['home']} onSelect={this.handleMenuSelect}>
                     <Item className="menuItem" key="home">
                         <Link to="/" className="nav-link">首页</Link>
                     </Item>

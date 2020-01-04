@@ -32,7 +32,7 @@
     line-height: 48px;
     width: 49%;
     text-align: center;
-    border-width: 0px;
+    border-width: 0;
     cursor: pointer;
 }
 
@@ -40,9 +40,12 @@
     margin-top: 20px;
     height: 25px;
     border-bottom: 1px dashed #ccc;
+    display: flex;
+    align-content: center;
+    align-items: center;
 }
 
-.home-diary-top span {
+.home-diary-top>span {
     display: block;
     height: 25px;
     width: 25px;
@@ -134,5 +137,5 @@
 .topic-img {
     float: left;
     list-style: none;
-    padding-left: 0px;
+    padding-left: 0;
 }
