@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Tag, Input, Tooltip, Icon } from 'antd';
+import { PlusOutlined } from '@ant-design/icons';
+
+import { Tag, Input, Tooltip } from 'antd';
 
 class EditableTagGroup extends React.Component {
     state = {
@@ -73,7 +75,7 @@ class EditableTagGroup extends React.Component {
                 )}
                 {!inputVisible && (
                     <Tag onClick={this.showInput} style={{ background: '#fff', borderStyle: 'dashed' }}>
-                        <Icon type="plus" /> New Tag
+                        <PlusOutlined /> New Tag
                     </Tag>
                 )}
             </div>

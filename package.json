@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
-    "antd": "^3.26.6",
+    "antd": "^4.0.0-rc.0",
     "autoprefixer": "9.7.3",
     "braft-editor": "^2.3.8",
     "chalk": "3.0.0",
@@ -29,7 +29,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.3.0",
     "redux": "^4.0.5",
-    "whatwg-fetch": "3.0.0"
+    "whatwg-fetch": "3.0.0",
+    "@ant-design/icons": "latest"
   },
   "scripts": {
     "start": "node scripts/start.js",

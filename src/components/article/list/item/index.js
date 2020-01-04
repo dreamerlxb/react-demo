@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import moment from 'moment';
-import Icon from 'antd/lib/icon';
+// import Icon from 'antd/lib/icon';
+import {StarOutlined, LikeOutlined, EyeOutlined} from '@ant-design/icons';
 import {Button} from "antd";
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
@@ -76,13 +77,13 @@ class Item extends Component {
             </div>
             <span className="hot-info-sign">
               <Button type="link">
-                <Icon type="eye-o" />&nbsp;123
+                <EyeOutlined />&nbsp;123
               </Button>
               <Button type="link" onClick={ () => this.props.toggle('Collections', TOGGLE_ARTICLE_C, this.props.item.id, this.isCollected) }>
-                <Icon type="star"/>&nbsp;23
+                <StarOutlined />&nbsp;23
               </Button>
               <Button type="link" onClick={ () => this.props.toggle('Praises', TOGGLE_ARTICLE_PRAISE, this.props.item.id, this.isPraised) }>
-                <Icon type="like" />&nbsp;12
+                <LikeOutlined />&nbsp;12
               </Button>
             </span>
           </div>
