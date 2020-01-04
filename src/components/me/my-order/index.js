@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // import { connect } from 'react-redux';
 import Pagination from 'antd/lib/pagination';
+import {Button} from 'antd';
 // import { bindActionCreators } from 'redux';
 // import { fetchEnrolls } from '../../../actions/enrolls.action.js';
 // import { fetchCount } from '../../../actions/common.action.js';
@@ -56,13 +57,13 @@ class MyOrder extends Component {
     return (
       <div className="order-form">
         <div className="ordersele">
-          <a className="" onClick={ () => this.setState({ status: 100 }) }>
+          <Button type="link" className="" onClick={ () => this.setState({ status: 100 }) }>
             <span>全部</span>
-          </a>
+          </Button>
           <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-          <a className="active" onClick={ () => this.setState({ status: 101 }) }>
+          <Button type="link" className="active" onClick={ () => this.setState({ status: 101 }) }>
             <span>待支付</span>
-          </a>
+          </Button>
         </div>
         { this.renderSetions() }
         <div style={{margin: 20}}>

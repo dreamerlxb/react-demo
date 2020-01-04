@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import moment from 'moment';
 import Icon from 'antd/lib/icon';
+import {Button} from "antd";
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
 // import { browserHistory } from 'react-router';
@@ -74,15 +75,15 @@ class Item extends Component {
               </div>
             </div>
             <span className="hot-info-sign">
-              <a>
+              <Button type="link">
                 <Icon type="eye-o" />&nbsp;123
-              </a>
-              <a onClick={ () => this.props.toggle('Collections', TOGGLE_ARTICLE_C, this.props.item.id, this.isCollected) }>
-                <Icon type="star"></Icon>&nbsp;23
-              </a>
-              <a onClick={ () => this.props.toggle('Praises', TOGGLE_ARTICLE_PRAISE, this.props.item.id, this.isPraised) }>
-                <Icon type="like"></Icon>&nbsp;12
-              </a>
+              </Button>
+              <Button type="link" onClick={ () => this.props.toggle('Collections', TOGGLE_ARTICLE_C, this.props.item.id, this.isCollected) }>
+                <Icon type="star"/>&nbsp;23
+              </Button>
+              <Button type="link" onClick={ () => this.props.toggle('Praises', TOGGLE_ARTICLE_PRAISE, this.props.item.id, this.isPraised) }>
+                <Icon type="like" />&nbsp;12
+              </Button>
             </span>
           </div>
         </div>

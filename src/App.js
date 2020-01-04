@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+//, applyMiddleware
+import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
-import createHistory from 'history/createBrowserHistory'
+// import createHistory from 'history/createBrowserHistory'
 
 // import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux';
 
@@ -22,7 +23,7 @@ import reducers from './reducers';
 
 import './App.css';
 
-const history = createHistory();
+// const history = createHistory();
 // const middleware = routerMiddleware(history);
 const store = createStore(
   combineReducers({
@@ -35,7 +36,7 @@ const store = createStore(
 class App extends Component {
 
   componentDidMount() {
-    var urlToChangeStream = 'http://127.0.0.1:3006/api/Allocations/change-stream?_format=event-stream&access_token=GI3Cfyo090HM2EimLdGYduRL83lQdzgrZuBYfIOfKwLrQMkvYytZwFYMafrPci4E';
+    const urlToChangeStream = 'http://127.0.0.1:3006/api/Allocations/change-stream?_format=event-stream&access_token=GI3Cfyo090HM2EimLdGYduRL83lQdzgrZuBYfIOfKwLrQMkvYytZwFYMafrPci4E';
     var src = new EventSource(urlToChangeStream);
     src.addEventListener('data', function(msg) {
       var data = JSON.parse(msg.data);

@@ -5,6 +5,8 @@ import moment from 'moment';
 import Card from 'antd/lib/card';
 import Icon from 'antd/lib/icon';
 
+import {Button} from 'antd';
+
 import { TOGGLE_TOPIC_C, TOGGLE_TOPIC_PRAISE } from '../../../constants';
 
 import me from '../../header/meUnauth.png';
@@ -76,15 +78,15 @@ class TopicDetailHeader extends Component {
           </div>
           <div style={{ flexGrow: 1 }} />
           <span className="article-info-comment">
-            <a >
+            <Button type="link" >
               <Icon type="form" />23
-            </a>
-            <a onClick={() => this.props.toggle('Collections', TOGGLE_TOPIC_C, this.props.topic.id, this.isCollected)}>
+            </Button>
+            <Button type="link" onClick={() => this.props.toggle('Collections', TOGGLE_TOPIC_C, this.props.topic.id, this.isCollected)}>
               <Icon type="star" />23
-            </a>
-            <a onClick={() => this.props.toggle('Praises', TOGGLE_TOPIC_PRAISE, this.props.topic.id, this.isPraised)}>
+            </Button>
+            <Button type="link" onClick={() => this.props.toggle('Praises', TOGGLE_TOPIC_PRAISE, this.props.topic.id, this.isPraised)}>
               <Icon type="like" />23
-            </a>
+            </Button>
           </span>
         </div>
         <div className="topictx topic_detail">

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import Card from 'antd/lib/card';
 import Icon from 'antd/lib/icon';
+import {Button} from 'antd'
 import {
   TOGGLE_ARTICLE_C,
   TOGGLE_ARTICLE_PRAISE
@@ -39,15 +40,15 @@ class ArticleHeader extends Component {
           </div>
           <div style={{ flexGrow: 1 }} />
           <span className="article-info-comment">
-            <a>
+            <Button type="link">
               <Icon type="form" />32
-            </a>
-            <a onClick={() => this.props.toggle('Collections', TOGGLE_ARTICLE_C, this.props.article.id, this.isCollected)}>
+            </Button>
+            <Button type="link" onClick={() => this.props.toggle('Collections', TOGGLE_ARTICLE_C, this.props.article.id, this.isCollected)}>
               <Icon type="star" />32
-            </a>
-            <a onClick={() => this.props.toggle('Praises', TOGGLE_ARTICLE_PRAISE, this.props.article.id, this.isPraised)}>
+            </Button>
+            <Button type="link" onClick={() => this.props.toggle('Praises', TOGGLE_ARTICLE_PRAISE, this.props.article.id, this.isPraised)}>
               <Icon type="like" />33
-            </a>
+            </Button>
           </span>
         </div>
         <article className="article-content" dangerouslySetInnerHTML={{ __html: this.props.article ? this.props.article.content : '' }} />

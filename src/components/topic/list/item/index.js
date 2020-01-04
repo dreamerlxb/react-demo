@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import moment from 'moment';
 import Modal from 'antd/lib/modal';
 import Icon from 'antd/lib/icon';
+import {Button} from 'antd';
 import { TOGGLE_TOPIC_C, TOGGLE_TOPIC_PRAISE } from '../../../../constants';
 
 import './index.css';
@@ -77,15 +78,15 @@ class Item extends Component {
         <div className="topicbot" style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
           { this.renderAuthor() }
           <div className="tp-comment">
-            <a>
+            <Button type="link">
               <Icon type="form" />
-            </a>
-            <a onClick={ () => this.props.toggle('Collections', TOGGLE_TOPIC_C, this.props.topic.id, this.isCollected) }>
+            </Button>
+            <Button type="link" onClick={ () => this.props.toggle('Collections', TOGGLE_TOPIC_C, this.props.topic.id, this.isCollected) }>
               <Icon type="star" />
-            </a>
-            <a onClick={ () => this.props.toggle('Praises', TOGGLE_TOPIC_PRAISE, this.props.topic.id, this.isPraised) }>
+            </Button>
+            <Button type="link" onClick={ () => this.props.toggle('Praises', TOGGLE_TOPIC_PRAISE, this.props.topic.id, this.isPraised) }>
               <Icon type="like" />
-            </a>
+            </Button>
           </div>
         </div>
         <div className="topic-detail">

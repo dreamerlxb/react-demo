@@ -9,7 +9,7 @@ import {BrowserRouter, Route} from 'react-router-dom'
 const Root = () => {
     return (
         <BrowserRouter basename='/'>
-            <Route path={`/`} component={App}></Route>
+            <Route path={`/`} component={App} />
         </BrowserRouter>
     )
 };

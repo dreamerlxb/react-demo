@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import BraftEditor from 'braft-editor'
-import 'braft-editor/dist/braft.css'
+import 'braft-editor/dist/index.css'
 
 import './index.css';
 

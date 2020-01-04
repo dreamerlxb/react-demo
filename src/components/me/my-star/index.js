@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 //   FETCH_ARTICLE_COLLECTIONS,
 //   FETCH_TOPIC_COLLECTIONS
 // } from '../../../constants';
+import { Button } from 'antd';
 import ArticleItem from './ArticleItem.js';
 // import TopicItem from './TopicItem.js';
 import './index.css';
@@ -103,17 +104,17 @@ class MyStar extends Component {
     return (
       <div className="collection-form">
         <div className="ordersele">
-          <a className="" >
+          <Button type="link" className="" >
             <span>全部</span>
-          </a>
+          </Button>
           <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-          <a className="" >
+          <Button type="link" className="" >
             <span>文章</span>
-          </a>
+          </Button>
           <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-          <a className="aactive" >
+          <Button type="link" className="aactive" >
             <span>话题</span>
-          </a>
+          </Button>
         </div>
         <ul className="no-list-style">
           { this.renderArticleItems() }

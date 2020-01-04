@@ -5,7 +5,7 @@ import moment from 'moment';
 import { Switch, Route, Link } from 'react-router-dom';
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
-// import Icon from 'antd/lib/icon';
+import { Button} from 'antd';
 
 import ArticleList from './list';
 import NotFound from '../notFound';
@@ -138,13 +138,28 @@ TopicItem.defaultProps = {
  */
 class Article extends Component {
 
-  constructor(props){
-      super(props);//第一步，这是必须的
-      //不能调用state
-      this.state = {
-          index: 0
-      };
-  }
+  // constructor(props) {
+  //     super(props);//第一步，这是必须的
+  //     //不能调用state
+  //     this.state = {
+  //         index: 0
+  //     };
+  // }
+
+  // static propTypes = {
+  //   articles: PropTypes.array
+  // };
+  //
+  // static defaultProps = {
+  //   topics: [
+  //     { id: 1 },
+  //     { id: 2 },
+  //     { id: 3 },
+  //     { id: 4 },
+  //     { id: 5 },
+  //     { id: 6 }
+  //   ]
+  // };
 
   render() {
     return (
@@ -165,7 +180,7 @@ class Article extends Component {
           </span>
           <div className="right-sidebar-topic-list">
             <div className="home-diary-top">
-              <span /><p><a href="javascript;">热门话题</a></p>
+              <span /><p><Button type="link">热门话题</Button></p>
             </div>
             {this.props.topics.map(item => <TopicItem key={item.id} />)}
           </div>
@@ -174,44 +189,44 @@ class Article extends Component {
     );
   }
 
-  // state = {
-  //   index: 0
-  // };
+  state = {
+    index: 0
+  };
 
-  // static propTypes = {
-  //   topics: PropTypes.array,
-  //   children: PropTypes.element,
-  //   fetchTopics: PropTypes.func
-  // };
+  static propTypes = {
+    topics: PropTypes.array,
+    children: PropTypes.element,
+    fetchTopics: PropTypes.func
+  };
 
-  // static defaultProps = {
-  //   topics: [
-  //     { id: 1 },
-  //     { id: 2 },
-  //     { id: 3 },
-  //     { id: 4 },
-  //     { id: 5 },
-  //     { id: 6 }
-  //   ]
-  // };
+  static defaultProps = {
+    topics: [
+      { id: 1 },
+      { id: 2 },
+      { id: 3 },
+      { id: 4 },
+      { id: 5 },
+      { id: 6 }
+    ]
+  };
 }
 
-Article.prototype = {
-  topics: PropTypes.array,
-  children: PropTypes.element,
-  fetchTopics: PropTypes.func
-};
+// Article.prototype = {
+//   topics: PropTypes.array,
+//   children: PropTypes.element,
+//   fetchTopics: PropTypes.func
+// };
 
-Article.defaultProps = {
-  topics: [
-    { id: 1 },
-    { id: 2 },
-    { id: 3 },
-    { id: 4 },
-    { id: 5 },
-    { id: 6 }
-  ]
-};
+// Article.defaultProps = {
+//   topics: [
+//     { id: 1 },
+//     { id: 2 },
+//     { id: 3 },
+//     { id: 4 },
+//     { id: 5 },
+//     { id: 6 }
+//   ]
+// };
 
 export default Article;
 

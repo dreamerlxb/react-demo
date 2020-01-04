@@ -27,7 +27,7 @@ class CommentItem extends React.Component {
           <span>
             <em>{item.user.name}</em>&nbsp;&nbsp;回复&nbsp;&nbsp;<em>{item.replyTo.name}</em>&nbsp;:&nbsp;{item.content}
           </span>
-          <a href="javascript;" onClick={() => this.setState({ reply: !this.state.reply, replyTo: item.user })}>回复</a>
+          <Button type="link" onClick={() => this.setState({ reply: !this.state.reply, replyTo: item.user })}>回复</Button>
         </li>
       );
     });
@@ -68,7 +68,8 @@ class CommentItem extends React.Component {
           <div style={{ flexGrow: 1 }} />
           <div className="comment-item-op">
             <span style={{ width: 10 }} />
-            <a className="comment-replybtn" onClick={() => this.setState({ reply: !this.state.reply, replyTo: null })}>回复</a>
+            <Button type="link" className="comment-replybtn"
+                    onClick={() => this.setState({ reply: !this.state.reply, replyTo: null })}>回复</Button>
           </div>
         </div>
         <div className="commain_con">
@@ -106,7 +107,7 @@ class CommentItem extends React.Component {
       skip: 0,
       limit: 10
     });
-  }
+  };
 
   handleSubmit = e => {
     e.preventDefault();
@@ -127,7 +128,7 @@ class CommentItem extends React.Component {
       userId,
       toUserId: this.state.replyTo ? this.state.replyTo.id : this.props.comment.userId
     });
-  }
+  };
 
   state = {
     reply: false,

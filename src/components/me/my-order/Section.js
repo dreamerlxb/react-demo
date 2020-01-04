@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Button} from 'antd';
 import moment from 'moment';
 import Item from './Item';
 import './Section.css';
@@ -40,7 +41,7 @@ export default class OrderItem extends React.Component {
         {this.renderItems()}
         <div>
           <span>支付状态：{this.props.order.isPaid ? '已支付' : '未支付'}</span>&nbsp;&nbsp;&nbsp;
-          <a>去支付 >></a>
+          <Button type="link">去支付 >></Button>
           <span style={{ flexGrow: 1 }} />
           <span>总费用：{this.caculateCost()}￥</span>
         </div>

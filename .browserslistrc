@@ -1,0 +1,7 @@
+defaults
+> 1%
+last 4 versions
+not ie <= 8
+# not IE 11
+# not IE_Mob 11
+maintained node versions
