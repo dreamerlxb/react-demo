@@ -26,37 +26,29 @@ class ModifyPwd extends Component {
   //     message.success('密码修改成功');
   //   }
   // }
+  formRef = React.createRef();
 
-  handleSubmit = e => {
-    e.preventDefault();
-    this.props.form.validateFieldsAndScroll((err, values) => {  // eslint-disable-line
-      if (!err) {
-        // const email =  this.props.user.email;
-        // this.props.setPwd({ ...values, id: userId, email });
-        console.log('Received values of form: ', values);
-      }
-    });
-  }
+  onFinish = values => {
+    console.log('Received values of form: ', values);
+  };
 
-  checkPassword = (rule, value, callback) => {
-    const form = this.props.form;  // eslint-disable-line
-    if (value && value !== form.getFieldValue('newPwd')) {
-      callback('两次密码不一致');
-    } else {
-      callback();
-    }
-  }
+  onFinishFailed = ({ errorFields }) => {
+    this.formRef.scrollToField(errorFields[0].name);
+  };
 
-  checkConfirm = (rule, value, callback) => {
-    const form = this.props.form;  // eslint-disable-line
-    if (value ) {
-      form.validateFields(['confirmPwd'], { force: true });
-    }
-    callback();
-  }
+  // handleSubmit = e => {
+  //   e.preventDefault();
+  //   this.props.form.validateFieldsAndScroll((err, values) => {  // eslint-disable-line
+  //     if (!err) {
+  //       // const email =  this.props.user.email;
+  //       // this.props.setPwd({ ...values, id: userId, email });
+  //       console.log('Received values of form: ', values);
+  //     }
+  //   });
+  // };
 
   render() {
-    const { getFieldDecorator } = this.props.form; // eslint-disable-line
+    // const { getFieldDecorator } = this.props.form; // eslint-disable-line
     const formItemLayout = {
       labelCol: { span: 6, offset: 0 },
       wrapperCol: { span: 14, offset: 0 }
@@ -74,44 +66,48 @@ class ModifyPwd extends Component {
       }
     };
     return (
-      <Form className="find-pwd-container" onSubmit={this.handleSubmit} layout="vertical">
+      <Form ref={this.formRef} className="find-pwd-container"
+            onFinish={this.onFinish}
+            onFinishFailed={this.onFinishFailed}
+            layout="vertical">
         <FormItem {...tailFormItemLayout}>
           <h3>重置密码</h3>
         </FormItem>
-        <FormItem {...formItemLayout} label="旧密码" hasFeedback>
-          {
-            getFieldDecorator('oldPwd', {
-              rules: [{
-                required: true, message: '旧密码不能为空'
-              }]
-            })(<Input type="password"/>)
-          }
+        <FormItem {...formItemLayout} label="旧密码" hasFeedback name="oldPassword"
+                  rules={[{
+                    required: true, message: '旧密码不能为空'
+                  }]}>
+          <Input.Password />
         </FormItem>
-        <FormItem {...formItemLayout} label="新密码" hasFeedback>
-          {
-            getFieldDecorator('newPwd', {
-              rules: [{
-                required: true, message: '新密码不能为空'
-              }, {
-                min: 6, message: '密码至少6位'
-              }, {
-                max: 16, message: '密码至多16位'
-              }, {
-                validator: this.checkConfirm
-              }]
-            })(<Input type="password" />)
-          }
+        <FormItem {...formItemLayout} label="新密码" name="newPassword"
+                  rules={[{
+                    required: true, message: '新密码不能为空'
+                  }, {
+                    min: 6, message: '密码至少6位'
+                  }, {
+                    max: 16, message: '密码至多16位'
+                  }]}
+                  hasFeedback>
+          <Input.Password />
         </FormItem>
-        <FormItem {...formItemLayout} label="确认新密码" hasFeedback>
-          {
-            getFieldDecorator('confirmPwd', {
-              rules: [{
-                required: true, message: '新密码不能为空'
-              }, {
-                validator: this.checkPassword
-              }]
-            })(<Input type="password" />)
-          }
+        <FormItem {...formItemLayout} label="确认新密码" name="confirmPwd"
+                  dependencies={['newPassword']}
+                  rules={
+                    [{
+                      required: true, message: '新密码不能为空'
+                    },
+                      ({ getFieldValue }) => ({
+                        validator(rule, value) {
+                          if (!value || getFieldValue('newPassword') === value) {
+                            return Promise.resolve();
+                          }
+
+                          return Promise.reject('两次密码不一致!');
+                        },
+                      })]
+                  }
+                  hasFeedback>
+          <Input.Password />
         </FormItem>
         <FormItem {...tailFormItemLayout}>
           <Button type="primary" htmlType="submit" size="large">修改</Button>
@@ -121,7 +117,6 @@ class ModifyPwd extends Component {
   }
 }
 
-// Form.create()
 export default ModifyPwd;
 
 // const mapStateToProps = (state, ownProps) => {
