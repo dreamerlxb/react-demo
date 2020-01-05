@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Checkbox from 'antd/lib/checkbox';
-import Input from 'antd/lib/input';
-import Button from 'antd/lib/button';
-import message from 'antd/lib/message';
+
+import {Checkbox, Input, Button, message} from 'antd';
+
 import { Link } from 'react-router-dom';
 // import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';

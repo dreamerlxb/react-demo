@@ -1,9 +1,9 @@
 import React from 'react';
-import Carousel from 'antd/lib/carousel';
-import Button from 'antd/lib/button';
+import {Carousel, Button} from 'antd';
 import mqtt from 'mqtt';
 
 import './index.css';
+import {LeftCircleOutlined, RightCircleOutlined} from "@ant-design/icons";
 
 export default class Home extends React.Component {
 
@@ -14,17 +14,17 @@ export default class Home extends React.Component {
       password: '123456',
       connectTimeout: 30 * 1000,
     };
-    const client = mqtt.connect('ws://127.0.0.1:3005', options)
+    const client = mqtt.connect('ws://127.0.0.1:3005', options);
 
     client.on('connect', function () {
-      client.subscribe('monit/1')
+      client.subscribe('monit/1');
       client.publish('monit/1', 'Hello mqtt')
-    })
+    });
 
     client.on('message', function (topic, message) {
       // message is Buffer
       console.log('topic', topic);
-      console.log(message.toString())
+      console.log(message.toString());
       client.end()
     })
   }
@@ -43,7 +43,8 @@ export default class Home extends React.Component {
         onMouseEnter={() => this.setState({ show: true })}
         onMouseLeave={() => this.setState({ show: false })}>
         <span style={{ left: 0, ...spanStyle }}>
-          <Button shape="circle" icon="left-circle" onClick={() => this.carousel.prev()} />
+          {/*"left-circle"*/}
+          <Button shape="circle" icon={<LeftCircleOutlined/>} onClick={() => this.carousel.prev()} />
         </span>
         <Carousel ref={c => this.carousel = c} afterChange={this.handleCarouselChange}>
           <div>
@@ -60,7 +61,7 @@ export default class Home extends React.Component {
           </div>
         </Carousel>
         <span style={{ right: 0, ...spanStyle }}>
-          <Button shape="circle" icon="right-circle" onClick={() => this.carousel.next()} />
+          <Button shape="circle" icon={<RightCircleOutlined/>} onClick={() => this.carousel.next()} />
         </span>
       </div>
     );

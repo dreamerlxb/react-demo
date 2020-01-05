@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Input from 'antd/lib/input';
-import Button from 'antd/lib/button';
-import message from 'antd/lib/message';
+import {Input, Button,message} from 'antd';
+
 // import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 // import { login, fetchLoginUser } from '../../actions/users.action.js';
+
 import { LOGIN_USER_ID, LOGIN_USER_TOKEN } from '../../constants';
 import { usernameRegExp, emailRegExp, pwdRegExp } from '../../constants/RegExp';
 import './index.css';

@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
-import Form from 'antd/lib/form';
-import Input from 'antd/lib/input';
-import Button from 'antd/lib/button';
+import {Form, Input, Button} from 'antd';
 // import message from 'antd/lib/message';
 // import { LOGIN_USER_ID, LOGIN_USER_TOKEN } from '../../../constants';
 // import { setPwd } from '../../../actions/users.action.js';
@@ -15,7 +13,7 @@ const FormItem = Form.Item;
 
 class ModifyPwd extends Component {
 
-  static propTypes= {
+  static propTypes = {
     setPwd: PropTypes.func,
     setPwdInfo: PropTypes.object,
     user: PropTypes.object
@@ -123,7 +121,8 @@ class ModifyPwd extends Component {
   }
 }
 
-export default Form.create()(ModifyPwd);
+// Form.create()
+export default ModifyPwd;
 
 // const mapStateToProps = (state, ownProps) => {
 //   return {

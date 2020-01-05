@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Popconfirm from 'antd/lib/popconfirm';
-import Icon from 'antd/lib/icon';
-import { Button } from 'antd';
+import { Button, Popconfirm } from 'antd';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import './Item.css';
+import {DeleteOutlined, FormOutlined, LikeOutlined} from "@ant-design/icons";
 
 class Item extends React.Component {
 
@@ -28,14 +27,14 @@ class Item extends React.Component {
           <span className="my_tp_comment">
             <Popconfirm title="确定要删除吗?" onConfirm={ () => this.props.delTopic(2) } onCancel={ () => { console.log('取消'); } } okText="确认" cancelText="取消">
               <Button type="link" className="tp_deletbtn">
-                <Icon type="delete" />
+                <DeleteOutlined />
               </Button>
             </Popconfirm>
             <Button type="link">
-              <Icon type="like" /><span style={{ color: '#999' }}>0</span>
+              <LikeOutlined /><span style={{ color: '#999' }}>0</span>
             </Button>
             <Button type="link">
-              <Icon type="form" /><span>0</span>
+              <FormOutlined /><span>0</span>
             </Button>
           </span>
         </div>

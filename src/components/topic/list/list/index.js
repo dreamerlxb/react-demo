@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
 // import { Link } from 'react-router-dom';
-import Pagination from 'antd/lib/pagination';
+import {Pagination} from 'antd';
 
 import Item from '../item';
 // import { fetchLatestTopics } from '../../../../../actions/topics.action';

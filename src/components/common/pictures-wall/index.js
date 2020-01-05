@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Upload from 'antd/lib/upload';
-import Icon from 'antd/lib/icon';
-import Modal from 'antd/lib/modal';
+import {Upload, Modal} from 'antd';
+import {PlusCircleOutlined} from "@ant-design/icons";
 
 class PicturesWall extends Component {
 
@@ -36,7 +35,7 @@ class PicturesWall extends Component {
         const { previewVisible, previewImage, fileList } = this.state;
         const uploadButton = (
             <div>
-                <Icon type="plus" />
+                <PlusCircleOutlined />
                 <div className="ant-upload-text">上传</div>
             </div>
         );

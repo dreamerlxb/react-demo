@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 // import { connect } from 'react-redux';
 
-import Input from 'antd/lib/input';
+import {Input} from 'antd';
 import Item from './item';
 // import { fetchLatestArticle } from '../../../../../actions/articles.action';
 // import { toggle } from '../../../../../actions/common.action';

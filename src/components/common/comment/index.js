@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
-import Pagination from 'antd/lib/pagination';
+import {Pagination} from 'antd';
 import Item from './Item';
 
 // import { FETCH_TOPIC_COMMENTS } from '../../../constants';

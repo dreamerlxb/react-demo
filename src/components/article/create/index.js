@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Input from 'antd/lib/input';
-import Button from 'antd/lib/button';
-import Select from 'antd/lib/select';
-import Checkbox from 'antd/lib/checkbox';
-import Icon from 'antd/lib/icon';
-import message from 'antd/lib/message';
-import Divider from 'antd/lib/divider'
+import {Input,Button,Select,Checkbox,message,Divider } from 'antd';
+
 // import BraftEditor from 'braft-editor'
 // import 'braft-editor/dist/braft.css'
 
@@ -21,6 +16,7 @@ import Editor from '../../common/editor';
 import { QINIU_URL, LOGIN_USER_ID } from '../../../constants';
 
 import './index.css';
+import {UploadOutlined} from "@ant-design/icons";
 
 const Option = Select.Option;
 
@@ -55,7 +51,7 @@ class CreateArticle extends Component {
               <img alt="" style={{height: '120px', width: '100%'}} src={this.state.imageUrl}/>
               { /* 文件上传 */ }
               <Button id="upload-article-avatar" type="primary" style={{width: '170px', margin: '10px 0 0'}}>
-                <Icon type="upload" /> 添加封面图片
+                <UploadOutlined /> 添加封面图片
               </Button>
               <span style={{background: '#FDFFDD', padding: '5px', fontSize: '12px'}}>上传文章宣传图片，建议尺寸为170x120px，只支持JPG、PNG、GIF，大小不超过2M。</span>
             </div>

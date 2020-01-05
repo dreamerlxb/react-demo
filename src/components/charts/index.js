@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Radio from 'antd/lib/radio';
-import Select from 'antd/lib/select';
-import DatePicker from 'antd/lib/date-picker';
+import {Radio, Select, DatePicker} from 'antd';
 import moment from 'moment';
 
 // 引入 ECharts 主模块

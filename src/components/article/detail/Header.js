@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import moment from 'moment';
-import Card from 'antd/lib/card';
-import Icon from 'antd/lib/icon';
-import {Button} from 'antd'
+import {FormOutlined, LikeOutlined, StarOutlined} from '@ant-design/icons'
+import {Button, Card} from 'antd'
 import {
   TOGGLE_ARTICLE_C,
   TOGGLE_ARTICLE_PRAISE
@@ -41,13 +40,13 @@ class ArticleHeader extends Component {
           <div style={{ flexGrow: 1 }} />
           <span className="article-info-comment">
             <Button type="link">
-              <Icon type="form" />32
+              <FormOutlined />32
             </Button>
             <Button type="link" onClick={() => this.props.toggle('Collections', TOGGLE_ARTICLE_C, this.props.article.id, this.isCollected)}>
-              <Icon type="star" />32
+              <StarOutlined />32
             </Button>
             <Button type="link" onClick={() => this.props.toggle('Praises', TOGGLE_ARTICLE_PRAISE, this.props.article.id, this.isPraised)}>
-              <Icon type="like" />33
+              <LikeOutlined />33
             </Button>
           </span>
         </div>

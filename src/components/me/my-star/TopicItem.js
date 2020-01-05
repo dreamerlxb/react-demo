@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 // import { connect } from 'react-redux';
-import Popconfirm from 'antd/lib/popconfirm';
+import {Button, Popconfirm} from 'antd';
 // import { bindActionCreators } from 'redux';
 import moment from 'moment';
 import './TopicItem.css';
@@ -63,7 +63,7 @@ class TopicItem extends Component {
         </div>
         <Popconfirm title="确定取消吗？" onConfirm={this.delCollection }>
           <div style={{height: '16px'}}>
-            <a className="tp_comment" href="javascipt;">取消收藏</a>
+            <Button type={'link'} className="tp_comment" >取消收藏</Button>
           </div>
         </Popconfirm>
       </div>

@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Input from 'antd/lib/input';
-import Checkbox from 'antd/lib/checkbox';
-import Button from 'antd/lib/button';
-import message from 'antd/lib/message';
+import {Input, Checkbox, Button, message} from 'antd';
 import PicturesWall from '../../common/pictures-wall'
 // import Upload from 'antd/lib/upload';
 

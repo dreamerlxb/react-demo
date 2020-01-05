@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
-import Menu from 'antd/lib/menu';
-import Modal from 'antd/lib/modal';
+import {Menu, Modal} from 'antd';
 import logo from '../../logo.svg';
 
 import me from './meUnauth.png';

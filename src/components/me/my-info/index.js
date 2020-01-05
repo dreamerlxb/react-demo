@@ -1,8 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 // import message from 'antd/lib/message';
-import Icon from 'antd/lib/icon';
-import Divider from 'antd/lib/divider';
+import {Divider} from 'antd';
 // import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 // import MyInfoShow from './MyInfo.js';
@@ -10,6 +9,7 @@ import Divider from 'antd/lib/divider';
 // import { modifyUserInfo, fetchLoginUser } from '../../../actions/users.action';
 
 import './index.css';
+import {ArrowRightOutlined, EditOutlined, ManOutlined} from "@ant-design/icons";
 
 class MyInfo extends React.Component {
   // static propTypes = {
@@ -31,14 +31,14 @@ class MyInfo extends React.Component {
           <div className="detail">
             <div className="title">
               <a className="name" href="/u/cd71ddfdf5bf">XXXXX</a>
-              <Icon type="man" style={{ marginLeft: 5 }} />
+              <ManOutlined style={{ marginLeft: 5 }} />
             </div>
             <ul className="info">
               <li>
                 <a className="meta-block" href="/users/cd71ddfdf5bf/following">
                   <p>11</p>
                   <p>
-                    关注 <Icon type="arrow" />
+                    关注 <ArrowRightOutlined />
                   </p>
                 </a>
                 <Divider type="vertical" />
@@ -46,14 +46,14 @@ class MyInfo extends React.Component {
               <li>
                 <a className="meta-block" href="/users/cd71ddfdf5bf/followers">
                   <p>0</p>
-                  <p>粉丝 <Icon type="arrow" /></p>
+                  <p>粉丝 <ArrowRightOutlined /></p>
                 </a>
                 <Divider type="vertical" />
               </li>
               <li>
                 <a class="meta-block" href="/u/cd71ddfdf5bf">
                   <p>14</p>
-                  <p>文章 <Icon type="arrow" /></p>
+                  <p>文章 <ArrowRightOutlined /></p>
                 </a>
                 <Divider type="vertical" />
               </li>
@@ -74,7 +74,7 @@ class MyInfo extends React.Component {
           </div>
           <div className="edit">
             <a className="name" href="/u/cd71ddfdf5bf">
-              <Icon type="edit" style={{ marginLeft: 5, fontSize: 18 }} />
+              <EditOutlined style={{ marginLeft: 5, fontSize: 18 }} />
             </a>
           </div>
         </div>

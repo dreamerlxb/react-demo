@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
-import Input from 'antd/lib/input';
-import Button from 'antd/lib/button';
-import message from 'antd/lib/message';
+import {Input, Button,message} from 'antd';
 
 import CommentList from './CommentList.js';
 import Header from './Header.js';
@@ -86,7 +84,7 @@ class TopicDetail extends Component {
       topicId: this.props.topic.id,
       userId
     });
-  }
+  };
 
   static propTypes = {
     fetchTopic: PropTypes.func,

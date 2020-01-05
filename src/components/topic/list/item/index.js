@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
-import Modal from 'antd/lib/modal';
-import Icon from 'antd/lib/icon';
-import {Button} from 'antd';
+import {Button, Modal} from 'antd';
 import { TOGGLE_TOPIC_C, TOGGLE_TOPIC_PRAISE } from '../../../../constants';
 
 import './index.css';
 import me from '../../../header/meUnauth.png';
+import {FormOutlined, LikeOutlined, StarOutlined} from "@ant-design/icons";
 
 class Item extends Component {
 
@@ -79,13 +78,13 @@ class Item extends Component {
           { this.renderAuthor() }
           <div className="tp-comment">
             <Button type="link">
-              <Icon type="form" />
+              <FormOutlined />
             </Button>
             <Button type="link" onClick={ () => this.props.toggle('Collections', TOGGLE_TOPIC_C, this.props.topic.id, this.isCollected) }>
-              <Icon type="star" />
+              <StarOutlined />
             </Button>
             <Button type="link" onClick={ () => this.props.toggle('Praises', TOGGLE_TOPIC_PRAISE, this.props.topic.id, this.isPraised) }>
-              <Icon type="like" />
+              <LikeOutlined />
             </Button>
           </div>
         </div>

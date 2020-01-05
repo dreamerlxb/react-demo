@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // import { connect } from 'react-redux';
-import Popconfirm from 'antd/lib/popconfirm';
-import Icon from 'antd/lib/icon';
+import {Button, Popconfirm} from 'antd';
 // import { bindActionCreators } from 'redux';
 import moment from 'moment';
 import './ArticleItem.css';
+import {StarOutlined} from "@ant-design/icons";
 // import { toggle } from '../../../actions/common.action.js';
 // import { TOGGLE_ARTICLE_C } from '../../../constants';
 
@@ -49,9 +49,9 @@ class ArticleItem extends Component {
             </div>
             <div style={{flexGrow: 1}}/>
             <Popconfirm title="确定取消吗？">
-              <a className="art_comment" href="javascript;">
-                <Icon type="star" />
-              </a>
+              <Button className="art_comment" >
+                <StarOutlined />
+              </Button>
             </Popconfirm>
           </div>
         </div>

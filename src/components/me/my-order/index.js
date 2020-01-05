@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // import { connect } from 'react-redux';
-import Pagination from 'antd/lib/pagination';
-import {Button} from 'antd';
+import {Button, Pagination} from 'antd';
 // import { bindActionCreators } from 'redux';
 // import { fetchEnrolls } from '../../../actions/enrolls.action.js';
 // import { fetchCount } from '../../../actions/common.action.js';

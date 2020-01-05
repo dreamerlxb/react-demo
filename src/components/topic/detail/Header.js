@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import moment from 'moment';
-import Card from 'antd/lib/card';
-import Icon from 'antd/lib/icon';
 
-import {Button} from 'antd';
+import {Button, Card} from 'antd';
 
 import { TOGGLE_TOPIC_C, TOGGLE_TOPIC_PRAISE } from '../../../constants';
 
 import me from '../../header/meUnauth.png';
 
 import './Header.css';
+import {FormOutlined, LikeOutlined, StarOutlined} from "@ant-design/icons";
 
 class TopicDetailHeader extends Component {
 
@@ -79,13 +78,13 @@ class TopicDetailHeader extends Component {
           <div style={{ flexGrow: 1 }} />
           <span className="article-info-comment">
             <Button type="link" >
-              <Icon type="form" />23
+              <FormOutlined />23
             </Button>
             <Button type="link" onClick={() => this.props.toggle('Collections', TOGGLE_TOPIC_C, this.props.topic.id, this.isCollected)}>
-              <Icon type="star" />23
+              <StarOutlined />23
             </Button>
             <Button type="link" onClick={() => this.props.toggle('Praises', TOGGLE_TOPIC_PRAISE, this.props.topic.id, this.isPraised)}>
-              <Icon type="like" />23
+              <LikeOutlined />23
             </Button>
           </span>
         </div>

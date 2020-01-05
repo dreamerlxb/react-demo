@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Input from 'antd/lib/input';
-import Select from 'antd/lib/select';
-import Button from 'antd/lib/button';
-import message from 'antd/lib/message';
-import Progress from 'antd/lib/progress';
+
+import {Input,Select, Button,message, Progress } from 'antd';
 // import BASE_URL, { LOGIN_USER_ID, QINIU_URL } from '../../../constants';
 import me from '../../header/meUnauth.png';
 // import { setAvatar } from '../../../actions/index.js';
@@ -84,7 +81,7 @@ export default class MyInfoEdit extends React.Component {
             <div className="info-form-item">
               <label>性别</label>
               <input type="hidden" value={this.state.gender} name="gender"/>
-              <Select style={{width: '300px'}} size="large" defaultValue={ this.props.user.gender == '1' ? '男' : '女' } onChange={ value => this.setState({gender: value})}>
+              <Select style={{width: '300px'}} size="large" defaultValue={ this.props.user.gender === '1' ? '男' : '女' } onChange={ value => this.setState({gender: value})}>
                 <Option value="1">男</Option>
                 <Option value="0">女</Option>
               </Select>

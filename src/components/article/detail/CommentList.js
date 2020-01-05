@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';
-import Pagination from 'antd/lib/pagination';
-import Divider from 'antd/lib/divider';
+import {Divider, Pagination} from 'antd';
 import Item from './CommentItem';
 import { FETCH_ARTICLE_COMMENTS } from '../../../constants';
 // import { fetchComments } from '../../../../actions/comment.action.js';

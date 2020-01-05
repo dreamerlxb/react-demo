@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Popconfirm from 'antd/lib/popconfirm';
+import {Button, Popconfirm} from 'antd';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import './Item.css';
@@ -30,7 +30,7 @@ class Item extends React.Component {
         <div className="my-article-op">
           <Link to={`/article/${ this.props.item }`}>预览</Link>
           <Popconfirm title="确定要删除吗?" onConfirm={ () => this.props.delArticle(this.props.item) } onCancel={ () => { } } okText="确认" cancelText="取消">
-            <a href="javascript;">删除</a>
+            <Button type={'link'}>删除</Button>
           </Popconfirm>
           <Link to={{pathname: '/article/edit', state: {article: this.props.item }}}>编辑</Link>
         </div>

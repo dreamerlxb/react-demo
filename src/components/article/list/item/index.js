@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import moment from 'moment';
-// import Icon from 'antd/lib/icon';
 import {StarOutlined, LikeOutlined, EyeOutlined} from '@ant-design/icons';
 import {Button} from "antd";
 // import { bindActionCreators } from 'redux';

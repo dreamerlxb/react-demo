@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Tabs from 'antd/lib/tabs';
-import Input from 'antd/lib/input';
+import {Tabs, Input} from 'antd';
 
 // import { bindActionCreators } from 'redux';
 // import { connect } from 'react-redux';

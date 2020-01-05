@@ -74,7 +74,7 @@ class Topic extends Component {
           </span>
           <div>
             <div className="home-diary-top">
-              <span/><p>热门文章</p>
+              <span/><p style={{marginBottom: 0}}>热门文章</p>
             </div>
             <ul className="right-article-list">
               { this.props.articles.map(item => <ArticleItem item={item} key={item.id}/>) }

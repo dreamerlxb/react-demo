@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { withRouter } from 'react-router'
-import Menu from 'antd/lib/menu';
-import Icon from 'antd/lib/icon';
+import {Menu} from 'antd';
 
 import './index.css';
+import {AppstoreOutlined, CloudUploadOutlined, SettingOutlined, UserOutlined} from "@ant-design/icons";
 
 const SubMenu = Menu.SubMenu;
 
@@ -34,7 +34,7 @@ class Sider extends Component {
             style={{ width: 200 }}
             onClick={this.handleClick}
             defaultOpenKeys={['sub1', 'sub2', 'sub4', 'mySetting']} >
-          <SubMenu key="sub1" title={<span><Icon type="user" /><span>个人中心</span></span>}>
+          <SubMenu key="sub1" title={<span><UserOutlined /><span>个人中心</span></span>}>
             <Menu.Item key="myInfo">
               <NavLink to="/me" exact>我的信息</NavLink>
             </Menu.Item>
@@ -48,12 +48,12 @@ class Sider extends Component {
               <NavLink to="/me/my-enroll-info" exact>常用报名信息</NavLink>
             </Menu.Item>
           </SubMenu>
-          <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>比赛</span></span>}>
+          <SubMenu key="sub2" title={<span><AppstoreOutlined /><span>比赛</span></span>}>
             <Menu.Item key="my-cmpt">
               <NavLink to="/me/my-cmpt" exact>我的赛事</NavLink>
             </Menu.Item>
           </SubMenu>
-          <SubMenu key="sub4" title={<span><Icon type="cloud-upload" /><span>我发布的</span></span>}>
+          <SubMenu key="sub4" title={<span><CloudUploadOutlined /><span>我发布的</span></span>}>
             <Menu.Item key="myArticle">
               <NavLink to="/me/myArticle" exact >文章</NavLink>
             </Menu.Item>
@@ -61,7 +61,7 @@ class Sider extends Component {
               <NavLink to="/me/myTopic" exact >话题</NavLink>
             </Menu.Item>
           </SubMenu>
-          <SubMenu key="mySetting" title={<span><Icon type="setting" /><span>设置</span></span>}>
+          <SubMenu key="mySetting" title={<span><SettingOutlined /><span>设置</span></span>}>
             <Menu.Item key="modifyPwd">
               <NavLink to="/me/modifyPwd" exact >修改密码</NavLink>
             </Menu.Item>
